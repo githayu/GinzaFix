@@ -1,0 +1,17 @@
+#playlist,
+#videoExplorerExpand {
+  display: none !important;
+}
+
+#videoShareLinks > .socialLinks {
+  top: -35px !important;
+}
+
+#outline,
+#videoInfo {
+  padding: 0 !important;
+}
+
+.sidebar {
+  padding-top: 10px;
+}

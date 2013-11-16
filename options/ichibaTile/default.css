@@ -1,0 +1,98 @@
+#outline #ichibaMainLogo,
+#outline .nicommendHeader {
+	width: 100% !important;
+	height: auto !important;
+	background: #eee !important;
+	border: none !important;
+	border-bottom: 2px #ddd solid !important;
+	border-radius: 0 !important;
+	padding: 0 !important;
+	margin-bottom: 20px !important;
+	position: relative !important;
+	float: none !important;
+	box-shadow: none !important;
+}
+
+#outline #ichibaMainLogo:before,
+#outline .nicommendHeader:before {
+	font-family: 'icon';
+	color: #fff;
+	width: 32px;
+	height: 32px;
+	font-size: 18px;
+	line-height: 32px;
+	text-align: center;
+	text-shadow: 0 1px 1px #000;
+	background-color: #333;
+	display: inline-block;
+	border-bottom: 2px #111 solid;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#outline #ichibaMainLogo:before { content: '\e800'; }
+#outline .nicommendHeader:before { content: '\e801'; }
+
+#outline #ichibaMainLogo:after,
+#outline .nicommendHeader:after {
+	left: 32px;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(136, 183, 213, 0);
+	border-left-color: #333;
+	border-width: 5px;
+	top: 50%;
+	margin-top: -5px;
+}
+
+#outline #ichibaMainLogo > a,
+#outline .nicommendHeader > .title {
+	color: #111 !important;
+	font-weight: bold !important;
+	height: 32px !important;
+	margin: 0 0 0 45px !important;
+	line-height: 32px !important;
+	text-shadow: none !important;
+	display: inline-block !important;
+}
+
+#outline #nicommendReload,
+#outline #ichibaMainHeader {
+	color: #eee !important;
+	height: 22px !important;
+	font-size: 11px !important;
+	font-weight: bold !important;
+	line-height: 2em !important;
+	float: none !important;
+	margin: 0 !important;
+	padding: 0 10px !important;
+	background: #333 !important;
+	position: absolute !important;
+	top: 5px !important;
+	right: -5px !important;
+}
+
+#outline #nicommendReload:after,
+#outline #ichibaMainHeader:after {
+	content: '';
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 3px 5px 0 0;
+	border-color: #777 transparent transparent transparent;
+	position: absolute;
+	bottom: -3px;
+	right: 0;
+}
+
+#outline #ichibaMainHeader > a {
+	color: #eee !important;
+	font-size: 11px !important;
+	text-decoration: none !important;
+	vertical-align: top !important;
+}

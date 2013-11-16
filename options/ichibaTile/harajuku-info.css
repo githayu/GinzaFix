@@ -1,0 +1,64 @@
+#nicommendContainer,
+#nicommendMoreButtonSide,
+.contentWrap.addContent,
+.contentWrap.addContent + div {
+  display: none !important;
+}
+
+#outline .main,
+#ichibaMain {
+  width: 100% !important;
+}
+
+#ichibaMain #ichiba_mainpiaitem {
+  width: 180px !important;
+  margin: 0 12px 15px 0 !important;
+}
+
+#ichibaMain dl.pia dd.pia {
+  width: auto !important;
+  margin-top: 50px !important;
+}
+
+#ichibaMain .rowJustify {
+  clear: none !important;
+}
+
+.sidebar,
+#ichibaMainLogo,
+#ichibaMainFooter {
+  display: none !important;
+}
+
+#ichibaMain {
+  display: flex;
+  display: -moz-flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -webkit-justify-content: flex-start;
+  align-items: flex-start;
+  -moz-align-items: flex-start;
+  -webkit-align-items: flex-start;
+  align-content: flex-start;
+  -moz-align-content: flex-start;
+  -webkit-align-content: flex-start;
+}
+
+#nicoIchiba {
+  padding-top: 40px !important;
+  position: relative !important;
+}
+
+#ichibaMainHeader {
+  position: absolute !important;
+  top: -40px !important;
+  right: 10px !important;
+}
+
+#ichibaMain .ichiba_mainitem {
+  margin: 0 12px 15px 0 !important;
+}

@@ -1,0 +1,10 @@
+#outline .outer {
+  margin: 0 auto !important;
+}
+
+#outline .outer > :not(.main),
+#outline .main > :not(#videoInfo),
+#outline .videoMainInfoContainer > #outline *:not(#bottomVideoDetailInformation):not(#videoInfoHead),
+#outline #videoInfoHead > *:not(.videoEditMenu) {
+  display: none !important;
+}

@@ -1,0 +1,6 @@
+#nicommendContainer,
+#nicommendMoreButtonSide,
+.contentWrap.addContent,
+.contentWrap.addContent + div {
+  display: none !important;
+}
