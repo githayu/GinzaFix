@@ -90,11 +90,11 @@ body.videoExplorer #videoHeader {
 }
 
 #videoHeaderMenu .searchContainer .searchOption {
-  top: 47px !important;
-  left: 241px !important;
-  border-color: #ddd !important;
-  width: 153px !important;
-  padding: 10px 0 !important;
+  top: 48px !important;
+  left: 198px !important;
+  border-color: #ccc !important;
+  width: 215px !important;
+  padding: 0 !important;
   background-color: #fff !important;
   box-shadow: 0 1px 2px rgba(0, 0, 0, .1) !important;
   z-index: 1 !important;
@@ -103,6 +103,7 @@ body.videoExplorer #videoHeader {
 #videoHeaderMenu .searchContainer .searchOption > ul > li > a {
   line-height: 2em !important;
   padding: 0 !important;
+  display: block !important;
 }
 
 #videoHeaderMenu .searchContainer .searchOption > ul > li > a:hover {
@@ -117,10 +118,10 @@ body.videoExplorer #videoHeader {
   width: auto !important;
   height: auto !important;
   background: #fff !important;
-  border: 1px #ddd solid !important;
   border-radius: 0 !important;
   box-shadow: none !important;
   padding: 0 !important;
+  display: inline-block !important;
 }
 
 #videoHeaderMenu .searchText:hover {
@@ -132,7 +133,6 @@ body.videoExplorer #videoHeader {
   margin: 0 !important;
   padding: 5px !important;
   display: block !important;
-  height: 14px !important;
 }
 
 #videoHeaderMenu .searchText > input[type=text]:hover,
