@@ -12,6 +12,7 @@ html, body {
 .videoMenuToggle,
 .ranking > .icon:first-child,
 .channel .ch_breadcrumb,
+#playerTabContainer .socialButtons,
 #playerCommentPanel .nicoru-button,
 #outline .videoMainInfoContainer > *:not(#videoInfoHead):not(#videoShareLinks):not(#bottomVideoDetailInformation),
 #outline.owner #videoInfoHead > *:not(.videoEditMenu),
