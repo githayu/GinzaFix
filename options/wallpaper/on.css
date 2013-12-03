@@ -1,0 +1,17 @@
+.wallPaletteItem:nth-child(2) > .wallPaletteItemName {
+  color: #fff !important;
+}
+
+.wallPaletteItem:nth-child(2).active > .wallPaletteItemName {
+  color: #000 !important;
+  position: relative;
+  display: block;
+}
+
+.wallPaletteItem:nth-child(2) > .wallPaletteItemName:before { content: 'My Wallpaper'; }
+.wallPaletteItem:nth-child(2) > .wallPaletteItemName:before { color: #000; }
+.wallPaletteItem:nth-child(2).active > .wallPaletteItemName:before { color: #fff; }
+
+#wallImageContainer .wallAlignmentArea[style*='wall_ginza.jpg'] {
+  background: url(/*[[wall_img]]*/) !important;
+}

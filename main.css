@@ -782,7 +782,7 @@ body.size_normal:not(.full_with_browser) #playerContainer {
   height: 598px !important;
 }
 
-#wallImageContainer .wallAlignmentArea[style*="wall_harajuku_white.png"] {
+#wallImageContainer .wallAlignmentArea[style*='wall_harajuku_white.png'] {
   background: #fff !important;
 }
 
@@ -1154,6 +1154,165 @@ body.setting_panel #playerAlignmentArea {
   padding: 0 !important;
 }
 
+
+/* Search
+----------------------------------------------- */
+#videoExplorer .videoExplorerContent.column4 .contentItemList .item.video {
+  width: 146px !important;
+  margin: 20px 12px 80px 0 !important;
+  border: 2px #ddd solid !important;
+  position: relative !important;
+}
+
+#videoExplorer .videoExplorerContent.column4 .contentItemList .item.video.gold {
+  border-color: #494949 !important;
+  background-image: -moz-linear-gradient(top, #fff1a1, #ffa517) !important;
+  background-image: -ms-linear-gradient(top, #fff1a1, #ffa517) !important;
+  background-image: -o-linear-gradient(top, #fff1a1, #ffa517) !important;
+  background-image: -webkit-linear-gradient(top, #fff1a1, #ffa517) !important;
+  background-image: linear-gradient(top, #fff1a1, #ffa517) !important;
+}
+
+#videoExplorer .videoExplorerContent.column4 .contentItemList .item.video.silver {
+  border-color: #494949 !important;
+  background-image: -moz-linear-gradient(top, #ebebeb, #bbb) !important;
+  background-image: -ms-linear-gradient(top, #ebebeb, #bbb) !important;
+  background-image: -o-linear-gradient(top, #ebebeb, #bbb) !important;
+  background-image: -webkit-linear-gradient(top, #ebebeb, #bbb) !important;
+  background-image: linear-gradient(top, #ebebeb, #bbb) !important;
+}
+
+#videoExplorer .videoExplorerContent.column4 .contentItemList .folder .column4 {
+  overflow: hidden !important;
+}
+
+#videoExplorer .videoExplorerContent.column4 .contentItemList .item.video .createdTime,
+#videoExplorer .videoExplorerContent.column4 .suggestVideo .item.video .createdTime {
+  position: absolute !important;
+  top: -20px !important;
+}
+
+.videoExplorerBody .videoExplorerContent .contentItemList .item.video .createdTime .new,
+.videoExplorerBody .videoExplorerContent .suggestVideo .item.video .createdTime .new {
+  color: #ff379b !important;
+  font-size: 11px !important;
+}
+
+#videoExplorer .videoExplorerContent.column4 .contentItemList .item.video .createdTime .value,
+#videoExplorer .videoExplorerContent.column4 .suggestVideo .item.video .createdTime .value {
+  font-weight: bold !important;
+}
+
+#videoExplorer .videoExplorerContent.column4 .contentItemList .folder .column4 .container {
+  width: 130px !important;
+  height: 100px !important;
+  background-size: 130px 80px !important;
+}
+
+#videoExplorer .videoExplorerContent.column4 .contentItemList .item.video .playTime,
+#videoExplorer .videoExplorerContent.column4 .suggestVideo .item.video .playTime {
+  right: 0 !important;
+  bottom: 0 !important;
+  font-weight: bold !important;
+}
+
+#videoExplorer .videoExplorerContent.column4 .contentItemList .item.video .thumbnailContainer .nextPlayButton,
+#videoExplorer .videoExplorerContent.column4 .suggestVideo .item.video .thumbnailContainer .nextPlayButton {
+  right: 8px !important;
+  bottom: 8px !important;
+  z-index: 1200 !important;
+}
+
+#videoExplorer .videoExplorerContent.column4 .contentItemList .item.video .balloon,
+#videoExplorer .videoExplorerContent.column4 .suggestVideo .item.video .balloon {
+  font-size: 12px !important;
+  left: 6px !important;
+  top: 6px !important;
+  bottom: 6px !important;
+  width: 118px !important;
+  border-radius: 0 !important;
+}
+
+#videoExplorer .videoExplorerContent.column4 .contentItemList .folder .container .folderName,
+#videoExplorer .videoExplorerContent.column4 .suggestVideo .folder .container .folderName {
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: auto !important;
+  padding: 5px !important;
+}
+
+#videoExplorer .videoExplorerContent.column4 .thumbnailContainer {
+  width: 134px !important;
+  height: 104px !important;
+  padding: 6px !important;
+  margin: 0 !important;
+}
+
+#videoExplorer .videoExplorerContent.column4 .thumbnailContainer > .link {
+  border: 2px #555 solid !important;
+  width: 130px !important;
+  height: 100px !important;
+}
+
+#videoExplorer .videoExplorerContent.column4 .thumbnailContainer + .link {
+  position: absolute !important;
+  display: block !important;
+  bottom: -60px !important;
+  left: 0 !important;
+  width: 150px !important;
+  height: 4.5em !important;
+  overflow: hidden !important;
+}
+
+#videoExplorer .videoExplorerContent.column4 .videoInformation {
+  border-top: 1px rgba(0, 0, 0 ,.1) solid !important;
+  clear: both !important;
+}
+
+#videoExplorer .videoExplorerContent.column4 .contentItemList .item.video .videoInformation .info,
+#videoExplorer .videoExplorerContent.column4 .suggestVideo .item.video .videoInformation .info {
+  color: #555 !important;
+  display: list-item !important;
+  font-size: 11px !important;
+  padding: 0 10px !important;
+  line-height: 18px !important;
+  border-bottom: 1px rgba(0, 0, 0, .1) solid !important;
+  border-top: 1px rgba(255, 255, 255, .3) solid !important;
+  background-color: rgba(0, 0, 0, .07) !important;
+}
+
+#videoExplorer .videoExplorerContent.column4 .contentItemList .item.video .videoInformation .info:last-child,
+#videoExplorer .videoExplorerContent.column4 .suggestVideo .item.video .videoInformation .info:last-child {
+  border-bottom: none !important;
+}
+
+#videoExplorer .videoExplorerContent.column4 .contentItemList .item.video .videoInformation .info > .value,
+#videoExplorer .videoExplorerContent.column4 .suggestVideo .item.video .videoInformation .info > .value {
+  font-size: 10px !important;
+  font-weight: bold !important;
+  margin: 0 !important;
+}
+
+#videoExplorer .videoExplorerContent.column4 .contentItemList .item.video .videoInformation .info > .value:before,
+#videoExplorer .videoExplorerContent.column4 .suggestVideo .item.video .videoInformation .info > .value:before {
+  content: ':' !important;
+  margin: 0 5px !important;
+}
+
+#videoExplorer .videoExplorerContent.column4 .uadFrame {
+  background: none !important;
+}
+
+#videoExplorer .videoExplorerContent.column4 .contentItemList .item.video .thumbnailContainer .noImage,
+#videoExplorer .videoExplorerContent.column4 .contentItemList .item.video .thumbnailContainer .thumbnail,
+#videoExplorer .videoExplorerContent.column4 .suggestVideo .item.video .thumbnailContainer .noImage,
+#videoExplorer .videoExplorerContent.column4 .suggestVideo .item.video .thumbnailContainer .thumbnail {
+  width: 130px !important;
+  height: 100px !important;
+  top: 0 !important;
+  left: 0 !important;
+}
 
 /* 中間
 ----------------------------------------------- */
@@ -1593,3 +1752,5 @@ body.setting_panel #playerAlignmentArea {
 /*[[nicommend]]*/
 
 /*[[ichibaTile]]*/
+
+/*[[wall_setting]]*/
