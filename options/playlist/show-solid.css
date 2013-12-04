@@ -1,6 +1,6 @@
 #playlist,
 #videoExplorerExpand {
-  width: 960px !important;
+  width: 980px !important;
   margin: 0 auto !important;
 }
 
@@ -9,7 +9,7 @@ body.videoExplorer #playlist {
 }
 
 div#videoExplorerExpand {
-  width: 958px !important;
+  width: 978px !important;
   border-left: 1px #d5d5d5 solid !important;
   border-right: 1px #d5d5d5 solid !important;
 }

@@ -14,4 +14,5 @@
 
 #wallImageContainer .wallAlignmentArea[style*='wall_ginza.jpg'] {
   background: url(/*[[wall_img]]*/) !important;
+  background-size: auto 471px !important;
 }
