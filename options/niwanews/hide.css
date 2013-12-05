@@ -1,19 +1,4 @@
-#textMarquee {
-  display: none !important;
-}
+#textMarquee { display: none !important; }
 
-body.size_medium:not(.full_with_browser):not(.up_marquee) #playerContainer {
-  height: 461px !important;
-}
-
-body.size_normal:not(.full_with_browser):not(.up_marquee) #playerContainer {
-  height: 557px !important;
-}
-
-body.size_medium:not(.full_with_browser) #playerContainer {
-  height: 518px !important;
-}
-
-body.size_normal:not(.full_with_browser) #playerContainer {
-  height: 614px !important;
-}
+body.size_medium:not(.full_with_browser):not(.up_marquee) #playerContainer { height: 461px !important; }
+body.size_normal:not(.full_with_browser):not(.up_marquee) #playerContainer { height: 557px !important; }

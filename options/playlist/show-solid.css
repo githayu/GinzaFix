@@ -4,12 +4,6 @@
   margin: 0 auto !important;
 }
 
-body.videoExplorer #playlist {
-  width: 100% !important;
-}
+body.videoExplorer #playlist { width: 100% !important; }
 
-div#videoExplorerExpand {
-  width: 978px !important;
-  border-left: 1px #d5d5d5 solid !important;
-  border-right: 1px #d5d5d5 solid !important;
-}
+div#videoExplorerExpand { width: 980px !important; }
