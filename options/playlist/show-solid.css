@@ -4,6 +4,6 @@
   margin: 0 auto !important;
 }
 
-body.videoExplorer #playlist { width: 100% !important; }
+body.videoExplorer #playlist { width: auto !important; }
 
 div#videoExplorerExpand { width: 980px !important; }

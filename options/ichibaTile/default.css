@@ -38,7 +38,7 @@
 #outline .nicommendHeader:after {
 	left: 32px;
 	border: solid transparent;
-	content: " ";
+	content: '';
 	height: 0;
 	width: 0;
 	position: absolute;
@@ -96,3 +96,68 @@
 	text-decoration: none !important;
 	vertical-align: top !important;
 }
+
+#ichibaMain .ichiba_mainitem { width: 130px !important; }
+#ichibaMain .rowJustify { clear: none !important; }
+#ichibaMain > .ichiba_mainitem:nth-of-type(4n+1) { clear: both !important; }
+#ichibaMain dt { height: 65px !important; }
+#ichibaMain .balloonUe { width: 100% !important; }
+
+#ichibaMain .balloonUe a {
+	position: relative !important;
+	background: #fff !important;
+	border: 2px solid #ccc !important;
+}
+
+#ichibaMain .balloonUe a:after,
+#ichibaMain .balloonUe a:before {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: '';
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+#ichibaMain .balloonUe a:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-top-color: #fff;
+	border-width: 8px;
+	margin-left: -8px;
+}
+
+#ichibaMain .balloonUe a:before {
+	border-color: rgba(204, 204, 204, 0);
+	border-top-color: #ccc;
+	border-width: 11px;
+	margin-left: -11px;
+}
+
+#ichibaMain .balloonShita { display: none !important; }
+#ichibaMain .thumbnail img {
+	width: 128px !important;
+	height: 128px !important;
+	border: none !important;
+}
+
+#ichibaMain dd.mobile {
+	border: 1px #ccc solid !important;
+	border-bottom: none !important;
+}
+
+#ichibaMain dd.mobile a {
+	width: 100% !important;
+	background-position-x: -27px !important;
+}
+
+#ichibaMain dd.mobile + .thumbnail { border-top: none !important; }
+#ichibaMain .thumbnail a > span {
+	text-align: center !important;
+	font-size: 20px !important;
+	padding: 5px !important;
+	display: block !important;
+}
+#ichibaMain .thumbnail { border: 1px #ccc solid !important; }
+#ichibaMainFooter { clear: both !important; }

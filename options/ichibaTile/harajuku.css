@@ -4,16 +4,57 @@
 .contentWrap.addContent + div,
 #outline .sidebar,
 #ichibaMainLogo,
-#ichibaMainFooter,
 #bottomVideoDetailInformation,
-.videoEditMenu {
-  display: none !important;
+.videoEditMenu { display: none !important; }
+
+#videoInfo .videoMainInfoContainer { margin: 0 !important; }
+#videoShareLinks { margin: 10px 0 10px auto !important; }
+
+.expandContainer {
+  position: relative !important;
+  background: #fff !important;
+  border: 2px solid #999 !important;
+}
+
+.expandContainer:after,
+.expandContainer:before {
+  bottom: 100% !important;
+  left: 95% !important;
+  border: solid transparent !important;
+  content: '' !important;
+  height: 0 !important;
+  width: 0 !important;
+  position: absolute !important;
+  pointer-events: none !important;
+  visibility: inherit !important;
+}
+
+.expandContainer:after {
+  border-color: rgba(255, 255, 255, 0) !important;
+  border-bottom-color: #fff !important;
+  border-width: 10px !important;
+  margin-left: -10px !important;
+}
+
+.expandContainer:before {
+  border-color: rgba(153, 153, 153, 0) !important;
+  border-bottom-color: #999 !important;
+  border-width: 13px !important;
+  margin-left: -13px !important;
+}
+
+.expandContainerBottom:before,
+.expandContainerBottom:after {
+  content: '';
+  display: block;
+  overflow: hidden;
+}
+.expandContainerBottom:after {
+  clear: both;
 }
 
 #outline .main,
-#ichibaMain {
-  width: 100% !important;
-}
+#ichibaMain { width: 100% !important; }
 
 #ichibaMain #ichiba_mainpiaitem {
   width: 180px !important;
@@ -25,39 +66,12 @@
   margin-top: 50px !important;
 }
 
-#ichibaMain .rowJustify {
-  clear: none !important;
+#ichibaMain .rowJustify { clear: none !important; }
+
+#ichibaMain dl { margin-right: 0 !important; }
+#ichibaMain > .ichiba_mainitem:nth-of-type(5n+1) {
+  clear: both;
+  margin-left: 0 !important;
 }
 
-#ichibaMain {
-  display: flex;
-  display: -moz-flex;
-  display: -webkit-flex;
-  flex-wrap: wrap;
-  -moz-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  justify-content: flex-start;
-  -moz-justify-content: flex-start;
-  -webkit-justify-content: flex-start;
-  align-items: flex-start;
-  -moz-align-items: flex-start;
-  -webkit-align-items: flex-start;
-  align-content: flex-start;
-  -moz-align-content: flex-start;
-  -webkit-align-content: flex-start;
-}
-
-#nicoIchiba {
-  padding-top: 40px !important;
-  position: relative !important;
-}
-
-#ichibaMainHeader {
-  position: absolute !important;
-  top: -40px !important;
-  right: 10px !important;
-}
-
-#ichibaMain .ichiba_mainitem {
-  margin: 0 12px 15px 0 !important;
-}
+#ichibaMainFooter { clear: both; }
