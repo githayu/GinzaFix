@@ -9,9 +9,9 @@ html, body {
 #videoInformationWrapper,
 #videoTagContainerPin,
 #tagRelatedBanner,
-.nicoruWrapper,
-.videoMenuToggle,
-.ranking > .icon:first-child,
+#videoHeaderTagList .nicoruWrapper,
+#videoHeader .videoMenuToggle,
+#topVideoInfo .ranking > .icon:first-child,
 .channel .ch_breadcrumb,
 #playerTabContainer .socialButtons,
 #playerCommentPanel .nicoru-button,
@@ -19,13 +19,12 @@ html, body {
 #outline.owner #videoInfoHead > *:not(.videoEditMenu),
 #outline:not(.owner) #videoInfoHead,
 #playlist .fadeout,
-.playlistItem .balloon .arrow,
-.commentUserProfile,
-.panelTrigger,
-.ichiba_mainitem > .nicoru,
+#playlistContainerInner .playlistItem .balloon .arrow,
+#videoReviewComment .commentUserProfile,
+#videoReviewComment .panelTrigger,
+#ichibaMain .ichiba_mainitem > .nicoru,
 #topVideoInfo .hiddenInfo,
 #bottomVideoDetailInformation .trigger,
-#feedbackLink,
 #nicommend .nicommendHeader > .description,
 #ichibaMainFooter > .commandArea2,
 #ichibaMainFooter > .info,
@@ -38,9 +37,9 @@ html, body {
 #videoReviewBottomAd,
 #playerBottomAd,
 #selectionSideAd,
-.playerTabAds,
-.videoExplorerFooterAdsContainer,
-.nicoSpotAds {
+#playerTabContainer .playerTabAds,
+#videoExplorer .videoExplorerFooterAdsContainer,
+#playerTabContainer .nicoSpotAds {
   display: none !important;
 }
 
@@ -318,7 +317,7 @@ body.videoExplorer #videoHeader {
   vertical-align: middle;
 }
 
-.hiddenInfo {
+#topVideoInfo .hiddenInfo {
   width: 260px !important;
   background-color: #fff !important;
   border: 2px #999f9f solid !important;
@@ -330,14 +329,14 @@ body.videoExplorer #videoHeader {
   z-index: 2 !important;
 }
 
-.videoMainInfoContainer {
+#topVideoInfo .videoMainInfoContainer {
   width: 664px !important;
   border: none !important;
   padding: 0 !important;
   display: block !important;
 }
 
-.parentVideoInfo {
+#topVideoInfo .parentVideoInfo {
   width: 640px !important;
   padding: 0 10px 10px !important;
   border: 2px #333 solid !important;
@@ -348,18 +347,18 @@ body.videoExplorer #videoHeader {
   float: none !important;
 }
 
-.parentVideoInfo > .cct {
+#topVideoInfo .parentVideoInfo > .cct {
   border-top: 1px #ccc solid !important;
   margin: 0 !important;
   padding-top: 10px !important;
 }
 
-.parentVideoInfo .videoThumb,
-.parentVideoLinkContainer {
+#topVideoInfo .parentVideoInfo .videoThumb,
+#topVideoInfo .parentVideoLinkContainer {
   margin-top: 10px !important;
 }
 
-.toggleDetailExpand {
+#videoHeader .toggleDetailExpand {
   margin: 0 !important;
   float: none !important;
   position: absolute !important;
@@ -367,8 +366,8 @@ body.videoExplorer #videoHeader {
   top: 60px !important;
 }
 
-.toggleDetailExpand > .videoDetailCloseButton,
-.toggleDetailExpand > .videoDetailOpenButton {
+#videoHeader .toggleDetailExpand > .videoDetailCloseButton,
+#videoHeader .toggleDetailExpand > .videoDetailOpenButton {
   width: 200px !important;
   height: 26px !important;
   text-indent: -999px !important;
@@ -377,11 +376,11 @@ body.videoExplorer #videoHeader {
   display: block;
 }
 
-.toggleDetailExpand > .videoDetailCloseButton {
+#videoHeader .toggleDetailExpand > .videoDetailCloseButton {
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAAAaCAMAAADFcOOIAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAABLUExURf///8zu5TNERJmqqjMzM8zMzGVlZZm7spmZmWZ3d/9mALKysllZWX9/f0xMTD8/P/+ZANnZ2YyMjOXl5f8zAHJycvLy8r+/v6WlpXZuNoAAAAMzSURBVHja7FfbdtwgDKSt0MrhVkOw/f9fWomLl/V6T5q2L26rPSdxDIEZzUiwSnF8u3ioGtOkLh6VwfQ3KDIVItOXi8ckRITH1a1VmPwDRAwR6SUbpZCUWvKmki6x8Bt+q2ac68wY62wyvwNHb0t74JVW2YjIpT44f5bI+/4UERmvt2oFBkhAmqCEVgqoPQOq+gvrH4ewdv45FrPWCFtNkyxdlgsIaxs/Lv3+EZH3t30KShgLZCEmFxiqA23tBjrNYDlrDhynThF5TwaxKtdjkfQmCCIttoiviSD00Exkhc1GA5pTqAGGoROY50R4wj6lbt6WcJyjSMAvNRRlPKIFy0xTIUIeDYWBiAssowN508V7Fmz0Me8g7qTE8x0k55cQ0bN/KwxOJM5nME+JlAl9SrWW2KgAA7/tRCw424hgTxnyjMFHjJ6HwvIEuc6mp/dOvLSqNfK/BqsGEVIG+5CEB5hnRN563ImwLST5ih2c+cPJZ39FBCrFLaEMzBpWlJTJboutJT/bU7yKiimptYe+iJoBcoYQQARHSEUHW4gwizASeYR5QuTt+/55IgKjVVeu/D1liUslg8PgbcAqRdp9/6IqtADEYUmmD2aJ7NhYa4QGIpC52O5EDjBfFDsPP7Tfbi1D1mbXrFXeCT/ZqVkLPTvblQS0JmyA0+tOiZCsMet7cNZpDs1KPGrDSASMO9TXAPMFkTvNqghWRQwVec+IlLZQWgPAeI4YRsXY3DmRY1d2dgmQYyOSpSvaQJRTq54DkQHmx4qgJ0+dSPTSOU6JtHNEqv5e2gv7ncHO3LtotFCNDGd240qk1LocelaBXG0WGzeS/OuKoNWWurVEaO9ZlmA7ESxVq/dzxA1GIpavH8r7MSLNQJ8cCi08ZFnRFON5i3HNVvbm/p7hIOHnFGldp/yIG6Mg6G4SIiSi3a3FLnL7ds6/uK2kvVGlp8PdtsbMRGYwootDywNBOrn6pCKjyRsW0v1CZbDfsPiAkTPGYVzaTGP4qmT+yB1QDJbKlWtJ9fry//Z7RSJ6ul3/G+JtYvdNt9vXi8ftJt/Z9cRUrh3TVNqB1ldXRPe2pi8ewuGHAAMAEfA/eO29stcAAAAASUVORK5CYII=) no-repeat !important;
 }
 
-.toggleDetailExpand > .videoDetailOpenButton {
+#videoHeader .toggleDetailExpand > .videoDetailOpenButton {
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAAAaCAMAAADFcOOIAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAABLUExURf///8zu5TNERJmqqjMzM8zMzJm7smVlZZmZmWZ3d/9mAFlZWbKystnZ2T8/P4yMjExMTPLy8v+ZAOXl5X9/f/8zAKWlpXJycr+/v/6lbrkAAAMwSURBVHja7FfbltsgDKStiHC4B5bk/7+0EhfbyeJ2t+2L2yrnJDHGoNGMJCwE2beTm2i2LOLk1hAsfwMjSwWyfDm5LQyEcZxdWhXJPwBEkSWLVlh8CPqSwspqfGFpgsE+E02breTvuGPM/qptwcNqtfQJILfrbfxFMpvACw+0JoJJCNWEkCD7f1Cy/bTvlx0i4AdRUHwC9DAZ3lmD5h8jxkZkcubmAZDr7bqGhMwrF5RzipbzIaCWkDMIWwCLUggUJZuUAiQ4BGK3k6jRM3Cnb4/dzDGQzVsCxdHPkH/A8ebmzxlpQPrqUQPCA1GQ71CDRPEKwJzJCkTRDb8DEnWgi1BH1piqYyAcluq56sgbI/5g+mcYadKqMqqOAW5AAqjQgXg1vKTLuAG5A/gyUZZ8VcmwQKMhRVNaWjRGjFAAe7Z+gZEGxNfQ+CidQ4eBgo8gNIIcCWhEdrRbhNADaEPL0oeb+pv4IeQbWxLTIqIQcA2Mpkmx54hvGzHnja2PMEIwx+cViHyKC4tojAhKe6XBQHBYtYMQOikO3EFWKHhKCyLOOme5mOhiKxBX1RuCZ34SCUGYPHdzxsh12FZ+u7RiKZDvukuLx2SNWIDOPbkPHkwVVa+bGcibORKEVqiG2eRAmk086U6IQBnHMbnTIAEp61rPbk6l9Xatn01apnNMmU9u4QyIqNsI8OT2vtATjmQOkKB7rdOaSVcVoDCUXzpy0miKSeLKRztEF6ZuznNkP4F0CWUA0ZmCDjMgo4/QDb3rZ5p9EcbZfSMYue8m7aWwfFTjK/NMSZGohMgWKrVVvWcc02TfTYBcVdWqFnmaHSU8hDCA5Jq1YvQRStU1/DFT6o4StrYRLgbqfQUazzjHK5IwUxSg1d0ZzrFa+SJjoJyLEzePjihvTz1qAEmZOx7VraamCoSOLJSTq7Qc5bxblYIHnWytdu97itGjMDf2PPEJOebInBd+1szc/MBZS/Z6mcaByvt+wqKDEJ+FImIZM9WjiPj4M4dAo2QrGCnbVrHL/9Pv+YDI5XL+N8TLQuJeLpevJ7fLhd/Z5UJQzm3LIts7zdkZkXJ7PTu1MYbvAgwA7DM/p2TyRfIAAAAASUVORK5CYII=) no-repeat !important;
 }
 
@@ -718,8 +717,9 @@ body.size_normal #topVideoInfo div:not([class]) > .videoThumb {
 
 #videoHeader.noAward #videoMenuTopList .videoMenuList.menuAward,
 #videoHeader.noAudioDownload #videoMenuTopList li:nth-child(6),
-#videoHeader.Award #videoMenuTopList #speedChecker,
-#videoHeader.AudioDownload #videoMenuTopList #speedChecker {
+/*#videoHeader:not(.noAward) #videoMenuTopList #speedChecker,
+#videoHeader:not(.noAudioDownload) #videoMenuTopList #speedChecker,*/
+#videoMenuTopList .userChannel:not(.active) {
   display: none !important;
 }
 
@@ -869,12 +869,13 @@ body.size_normal.up_marquee:not(.full_with_browser) #playerContainer { height: 6
 }
 
 #playerTabContainer .playerTabContentItem.comment.active {
+  height: 92.8% !important;
   height: calc(100% - 30px) !important;
   height: -moz-calc(100% - 30px) !important;
   height: -webkit-calc(100% - 30px) !important;
 }
 
-.playerTabItem {
+#playerTabContainer .playerTabItem {
   color: #fff !important;
   background-image: -moz-linear-gradient(top, #999, #ccc) !important;
   background-image: -webkit-linear-gradient(top, #999, #ccc) !important;
@@ -886,17 +887,17 @@ body.size_normal.up_marquee:not(.full_with_browser) #playerContainer { height: 6
   line-height: 2em !important;
 }
 
-.playerTabItem:not(.active):hover {
+#playerTabContainer .playerTabItem:not(.active):hover {
   background-image: -moz-linear-gradient(top, #666, #999) !important;
   background-image: -webkit-linear-gradient(top, #666, #999) !important;
   background-image: linear-gradient(top, #666, #999) !important;
 }
 
-.playerTabHeader th:last-child {
+#playerTabContainer .playerTabHeader th:last-child {
   border-right: 2px #333 solid !important;
 }
 
-.playerTabItem.active {
+#playerTabContainer .playerTabItem.active {
   color: #000 !important;
   background: #fff !important;
   border-bottom-color: #fff !important;
@@ -921,6 +922,15 @@ body.size_normal.up_marquee:not(.full_with_browser) #playerContainer { height: 6
   border-color: #555 !important;
 }
 
+#playerCommentPanel .playerCommentPanelHeader .currentThreadName:hover:after,
+#playerCommentPanel .playerCommentPanelHeader .threadSelectPanel:hover:after {
+  background: -moz-linear-gradient(top, #444, #868686) !important;
+  background: -ms-linear-gradient(top, #444, #868686) !important;
+  background: -o-linear-gradient(top, #444, #868686) !important;
+  background: -webkit-linear-gradient(top, #444, #868686) !important;
+  background: linear-gradient(top, #444, #868686) !important;
+}
+
 #playerCommentPanel .playerCommentPanelHeader .currentThreadName:after,
 #playerCommentPanel .playerCommentPanelHeader .threadName.selectedComment:after {
   content: '\0025bc' !important;
@@ -934,11 +944,11 @@ body.size_normal.up_marquee:not(.full_with_browser) #playerContainer { height: 6
   height: 19px !important;
   display: inline-block !important;
   margin: 1px !important;
-  background: -moz-linear-gradient(top, #555555, #969696) !important;
-  background: -ms-linear-gradient(top, #555555, #969696) !important;
-  background: -o-linear-gradient(top, #555555, #969696) !important;
-  background: -webkit-linear-gradient(top, #555555, #969696) !important;
-  background: linear-gradient(top, #555555, #969696) !important;
+  background: -moz-linear-gradient(top, #555, #969696) !important;
+  background: -ms-linear-gradient(top, #555, #969696) !important;
+  background: -o-linear-gradient(top, #555, #969696) !important;
+  background: -webkit-linear-gradient(top, #555, #969696) !important;
+  background: linear-gradient(top, #555, #969696) !important;
 }
 
 #playerCommentPanel .playerCommentPanelHeader .autoScroll,
@@ -1017,50 +1027,51 @@ body.size_normal.up_marquee:not(.full_with_browser) #playerContainer { height: 6
 
 #playerCommentPanel .section .commentTable#commentLog { top: 55px !important; }
 
-.commentTableHeaderWrapper {
+#playerTabContainer .commentTableHeaderWrapper {
   background: -moz-linear-gradient(top, #fff, #eee) !important;
   background: -webkit-linear-gradient(top, #fff, #eee) !important;
   background: linear-gradient(top, #fff, #eee) !important;
   border-bottom: 1px #555 solid !important;
 }
 
-.commentTableHeader {
+#playerTabContainer .commentTableHeader {
   font-size: 12px !important;
   color: #111 !important;
 }
 
-.commentTableContainer {
+#playerTabContainer .commentTableContainer {
   width: 100% !important;
   background-color: #fff !important;
   top: 23px !important;
   overflow: hidden !important;
 }
 
-.commentTableContainer:hover {
+#playerTabContainer .commentTableContainer:hover {
   overflow: auto !important;
 }
 
-.commentTableContainer::-webkit-scrollbar {
+#playerTabContainer .commentTableContainer::-webkit-scrollbar {
   width: 15px;
 }
 
-.commentTableContainer::-webkit-scrollbar-track-piece {
+#playerTabContainer .commentTableContainer::-webkit-scrollbar-track-piece {
   background: #eee;
   box-shadow: 0 1px 3px rgba(0, 0, 0, .5), 0 -1px 1px rgba(0, 0, 0, .3);
 }
 
-.commentTableContainer::-webkit-scrollbar-thumb {
+#playerTabContainer .commentTableContainer::-webkit-scrollbar-thumb {
   background: #ccc;
   border: 2px #eee solid;
 }
 
-.commentTableContainer::-webkit-scrollbar-thumb:hover {
+#playerTabContainer .commentTableContainer::-webkit-scrollbar-thumb:hover {
   background: #bbb;
 }
 
 #playerCommentPanel .commentTableContainerInner { font-size: 13px !important; }
 #commentToolTip > .message { font-size: 12px !important; }
 
+#videoDetailInformation .translation .translationButton,
 #playerCommentPanel .playerCommentPanelHeader .comment,
 #playerCommentPanel .playerCommentPanelHeader .refresh,
 #commentLogHeader .logRefresh,
@@ -1082,21 +1093,35 @@ body.size_normal.up_marquee:not(.full_with_browser) #playerContainer { height: 6
   box-shadow: 2px 0 #777, 0 2px #777, 2px 2px #777, -2px 0 #777, 0 -2px #aaa, -2px -2px #aaa, 2px -2px #aaa, -2px 2px #777;
 }
 
-.cell.hover,
-.cell.hover > .comment,
-.cell.hover > .vpos,
-.cell.hover > .time,
-.cell.hover > .resNo {
+#videoDetailInformation .translation .translationButton:hover,
+#playerCommentPanel .playerCommentPanelHeader .comment:hover,
+#playerCommentPanel .playerCommentPanelHeader .refresh:hover,
+#commentLogHeader .logRefresh:hover,
+#playerNgPanel .ngAddPanelTriger:hover,
+#playerNgPanel .ngAddButton:hover {
+  background: -moz-linear-gradient(top, #ddd 45%, #bbb , #ccc) !important;
+  background: -ms-linear-gradient(top, #ddd 45%, #bbb , #ccc) !important;
+  background: -o-linear-gradient(top, #ddd 45%, #bbb , #ccc) !important;
+  background: -webkit-linear-gradient(top, #ddd 45%, #bbb , #ccc) !important;
+  background: linear-gradient(top, #ddd 45%, #bbb , #ccc) !important;
+  box-shadow: 2px 0 #6e6e6e, 0 2px #6e6e6e, 2px 2px #6e6e6e, -2px 0 #6e6e6e, 0 -2px #9a9a9a, -2px -2px #9a9a9a, 2px -2px #9a9a9a, -2px 2px #6e6e6e;
+}
+
+#playerTabContainer .cell.hover,
+#playerTabContainer .cell.hover > .comment,
+#playerTabContainer .cell.hover > .vpos,
+#playerTabContainer .cell.hover > .time,
+#playerTabContainer .cell.hover > .resNo {
   color: #111 !important;
   background-color: #ddd !important;
 }
 
-.commentTableHeaderWrapper .cell > span {
+#playerTabContainer .cell > span {
   height: 16px;
   vertical-align: middle;
 }
 
-.cell .resizer {
+#playerTabContainer .cell .resizer {
   bottom: 0;
   height: auto !important;
   background-color: rgba(0, 0, 0, .1) !important;
@@ -1106,13 +1131,13 @@ body.size_normal.up_marquee:not(.full_with_browser) #playerContainer { height: 6
   height: auto !important;
 }
 
-.playerTabContent {
+#playerTabContainer .playerTabContent {
   background-color: #fff !important;
   border: 2px #333 solid !important;
   bottom: 4px !important;
 }
 
-.nicommendContentsOuter {
+#nicommendPanelContent .nicommendContentsOuter {
   border-color: #555 !important;
   background: #fff !important;
 }
@@ -1150,7 +1175,7 @@ body.size_normal.up_marquee:not(.full_with_browser) #playerContainer { height: 6
   margin: -1.5em 0 0 !important;
 }
 
-.item .itemInfo {
+#nicommendPanelContent.item .itemInfo {
   padding-left: 8px !important;
 }
 
@@ -1224,7 +1249,7 @@ body.setting_panel #playerAlignmentArea {
   box-shadow: 0 1px 2px rgba(0, 0, 0, .1) inset !important;
 }
 
-/* プレイリストエリア & エクスプローラ
+/* プレイリスト & エクスプローラ
 ----------------------------------------------- */
 #playerContainerWrapper,
 #playlist { box-shadow: none !important; }
@@ -1255,7 +1280,7 @@ body.videoExplorer #playlist {
   border-left-color: #38f !important;
 }
 
-.videoExplorerBody .searchBox {
+#videoExplorer .videoExplorerBody .searchBox {
   border-radius: 0 !important;
   background: #eee !important;
   border: none !important;
@@ -1270,44 +1295,73 @@ body.videoExplorer #playlist {
   border: none !important;
 }
 
-#playlistContainerInner .playlistItem {
-  opacity: 1 !important;
+#playlistContainerInner .playlistItem { opacity: 1 !important; }
+#playlistContainerInner .playlistItem.playing {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .7) !important;
+  z-index: 4 !important;
 }
 
-#playlistContainer {
-  background: #333 !important;
+#playlistContainerInner .playlistItem.empty {
+  box-shadow: none !important;
+  background-color: #1e1e1e !important;
 }
+
+#playlistContainer { background: #333 !important; }
 
 #playlistContainer .prevArrow,
 #playlistContainer .nextArrow {
+  width: 13px !important;
+  height: 0 !important;
+  top: 53px !important;
+  background: none !important;
+  overflow: visible !important;
+  border-top: 11px solid #777 !important;
+  border-bottom: 11px solid #777 !important;
+  z-index: 5 !important;
+}
+
+#playlistContainer .prevArrow { border-right: 11px solid transparent !important; }
+#playlistContainer .nextArrow { border-left: 11px solid transparent !important; }
+
+#playlistContainer .prevArrow:before,
+#playlistContainer .prevArrow:after,
+#playlistContainer .nextArrow:before,
+#playlistContainer .nextArrow:after {
+  content: '' !important;
   background: #777 !important;
+  display: inline-block !important;
+  width: 24px !important;
+  height: 53px !important;
   position: absolute !important;
 }
 
-#playlistContainer .prevArrow:hover,
-#playlistContainer .nextArrow:hover {
-  background: #888 !important;
-}
+#playlistContainer .prevArrow:before,
+#playlistContainer .nextArrow:before { bottom: 11px !important; }
 
 #playlistContainer .prevArrow:before,
-#playlistContainer .nextArrow:before {
-  content: '';
-  border-style: solid;
-  position: absolute;
-  top: 53px;
-}
+#playlistContainer .prevArrow:after { left: 0 !important; }
+#playlistContainer .nextArrow:before,
+#playlistContainer .nextArrow:after { right: 0 !important; }
 
-#playlistContainer .prevArrow:before {
-  border-width: 12px 12px 12px 0;
-  border-color: transparent #333 transparent transparent;
-  right: 0;
-}
+#playlistContainer .prevArrow:after,
+#playlistContainer .nextArrow:after { top: 11px !important; }
 
-#playlistContainer .nextArrow:before {
-  border-width: 12px 0 12px 12px;
-  border-color: transparent transparent transparent #333;
-  left: 0;
-}
+#playlistContainer .prevArrow.disabled,
+#playlistContainer .nextArrow.disabled { border-color: #191919 transparent #191919 transparent !important; }
+
+#playlistContainer .prevArrow.disabled:before,
+#playlistContainer .prevArrow.disabled:after,
+#playlistContainer .nextArrow.disabled:before,
+#playlistContainer .nextArrow.disabled:after { background: #191919 !important; }
+
+#playlistContainer .prevArrow:not(.disabled):hover,
+#playlistContainer .nextArrow:not(.disabled):hover { border-color: #888 transparent #888 transparent !important; }
+
+#playlistContainer .prevArrow:not(.disabled):hover:before,
+#playlistContainer .prevArrow:not(.disabled):hover:after,
+#playlistContainer .nextArrow:not(.disabled):hover:before,
+#playlistContainer .nextArrow:not(.disabled):hover:after { background: #888 !important; }
+
 
 #playlistContainerInner .playlistItem > .itemLink {
   padding: 11px 0 !important;
@@ -1331,7 +1385,7 @@ body.videoExplorer #playlist {
 #playlistContainer .playlistItem .thumbContainer {
   width: 130px !important;
   height: 73px !important;
-  position: static !important;
+  position: relative !important;
   overflow: hidden !important;
 }
 
@@ -1340,9 +1394,17 @@ body.videoExplorer #playlist {
   margin-top: -12px !important;
 }
 
+#playlistContainer .playlistItem .thumbContainer .videoLength {
+  font-size: 11px !important;
+  position: absolute !important;
+  padding: 0 5px !important;
+  line-height: 19px !important;
+  background-color: rgba(0, 0, 0, .7) !important;
+}
+
 #playlistContainerInner .playlistItem .videoTitle {
   color: #f5f5f5 !important;
-  height: 2.3em;
+  height: 2.3em !important;
 }
 
 #playlistContainerInner .playlistItem .balloon {
@@ -1355,20 +1417,9 @@ body.videoExplorer #playlist {
   min-width: 130px !important;
   max-width: 130px !important;
   height: 73px;
-  -webkit-transition: opacity .25s ease 0s;
-     -moz-transition: opacity .25s ease 0s;
-      -ms-transition: opacity .25s ease 0s;
-       -o-transition: opacity .25s ease 0s;
-          transition: opacity .25s ease 0s;
-  opacity: 0;
-  display: block !important;
-  visibility: hidden;
 }
 
-#playlistContainerInner .playlistItem > .itemLink:hover .balloon {
-  opacity: 1;
-  visibility: inherit;
-}
+#playlistContainerInner .playlistItem > .itemLink:hover .thumbContainer .videoLength { display: none !important; }
 
 #playlistContainer .playlistItem .balloon .videoInformation li > span { float: right; }
 
@@ -1446,8 +1497,8 @@ body.videoExplorer #playlist {
   top: -20px !important;
 }
 
-.videoExplorerBody .videoExplorerContent .contentItemList .item.video .createdTime .new,
-.videoExplorerBody .videoExplorerContent .suggestVideo .item.video .createdTime .new {
+#videoExplorer .videoExplorerBody .videoExplorerContent .contentItemList .item.video .createdTime .new,
+#videoExplorer .videoExplorerBody .videoExplorerContent .suggestVideo .item.video .createdTime .new {
   color: #ff379b !important;
   font-size: 11px !important;
 }
@@ -1550,7 +1601,7 @@ body.videoExplorer #playlist {
 
 #videoExplorer .videoExplorerContent.column4 .contentItemList .item.video .videoInformation .info > .value:before,
 #videoExplorer .videoExplorerContent.column4 .suggestVideo .item.video .videoInformation .info > .value:before {
-  content: ':' !important;
+  content: '\003a' !important;
   margin: 0 5px !important;
 }
 
@@ -1575,8 +1626,10 @@ body.videoExplorer #playlist {
   position: relative;
 }
 
-#videoInfo {
-  padding-bottom: 15px;
+#videoInfo .videoMainInfoContainer {
+  padding: 0 !important;
+  border: none !important;
+  display: block !important;
 }
 
 #videoInfo .videoEditMenu {
@@ -1609,16 +1662,25 @@ body.videoExplorer #playlist {
   z-index: 1;
 }
 
-.socialLinkTwitter {
+.socialLinks .socialLinkTwitter {
   width: 115px !important;
 }
 
-.socialLinkGoogle {
+.socialLinks .socialLinkGoogle {
   width: 70px !important;
 }
 
-.socialLinkFacebook {
+.socialLinks .socialLinkFacebook {
   width: 110px !important;
+}
+
+#videoDetailInformation .translation {
+  background-color: #fff !important;
+  position: absolute !important;
+  top: 30px !important;
+  right: 12px !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 #bottomVideoDetailInformation {
@@ -1634,6 +1696,11 @@ body.videoExplorer #playlist {
   background: #fff !important;
   border: 2px #999 solid;
   padding: 10px !important;
+}
+
+#nicommend {
+  border: none !important;
+  padding: 0 !important;
 }
 
 
@@ -1662,7 +1729,7 @@ body.videoExplorer #playlist {
   box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
 }
 
-.newVideoReview {
+#videoReviewForm .newVideoReview {
   width: 318px !important;
   border-top: none !important;
   border-left: none !important;
@@ -1672,17 +1739,17 @@ body.videoExplorer #playlist {
   resize: vertical !important;
 }
 
-.newVideoReview, x:-moz-any-link {
+#videoReviewForm .newVideoReview, x:-moz-any-link {
   width: 324px !important;
   margin: 0 -1px 0 !important;
 }
 
-.videoReviewAside {
+#videoReviewForm .videoReviewAside {
   margin: 0 !important;
   padding: 8px 10px 0 !important;
 }
 
-.inputSubmit {
+#videoReviewForm .inputSubmit {
   margin: 0 !important;
   padding: 8px 8px 8px 0 !important;
 }
@@ -1692,23 +1759,23 @@ body.videoExplorer #playlist {
   padding: 0 !important;
 }
 
-.videoReviewContrl {
+#videoReviewContrl .videoReviewContrl {
   text-align: right !important;
   width: 170px !important;
 }
 
-.videoReviewResText:hover {
+#videoReviewComment .videoReviewResText:hover {
   border-color: #ccc !important;
   box-shadow: 0 1px 1px rgba(0, 0, 0, .05) inset;
 }
 
-.videoReviewResText:focus {
+#videoReviewComment .videoReviewResText:focus {
   border-color: #38f !important;
   box-shadow: 0 1px 1px rgba(0, 0, 0, .05) inset;
 }
 
 #videoReviewHead .inputSubmit input[type=submit],
-.videoReviewResSubmit {
+#videoReviewComment .videoReviewResSubmit {
   font-weight: bold;
   height: auto !important;
   line-height: 2.3em !important;
@@ -1718,13 +1785,13 @@ body.videoExplorer #playlist {
 }
 
 #videoReviewHead .inputSubmit input[type=submit]:hover,
-.videoReviewResSubmit:hover {
+#videoReviewComment .videoReviewResSubmit:hover {
   background: #38f !important;
   box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
 }
 
 #videoReviewHead .inputSubmit input[type=submit]:active,
-.videoReviewResSubmit:active {
+#videoReviewComment .videoReviewResSubmit:active {
   box-shadow: 0 1px 3px rgba(0, 0, 0, .4) inset;
 }
 
@@ -1756,7 +1823,7 @@ body.videoExplorer #playlist {
   padding: 0 10px !important;
 }
 
-.videoReviewReload:before {
+#reviewRefresh > .videoReviewReload:before {
   content: '';
   width: 0px;
   height: 0px;
@@ -1768,28 +1835,28 @@ body.videoExplorer #playlist {
   left: 0;
 }
 
-.stream {
+#videoReviewComment .stream {
   margin: 10px 0 !important;
   background: #fff !important;
 }
 
-.stream .inner {
+#videoReviewComment .stream .inner {
   background: #fff !important;
   border: none !important;
   width: 100% !important;
   padding: 0 0 10px !important;
 }
 
-.stream .inner:hover {
+#videoReviewComment .stream .inner:hover {
   background: #fff !important;
 }
 
-.commentContent {
+#videoReviewComment .commentContent {
   width: auto !important;
   margin: 0 !important;
 }
 
-.commentContent h5 {
+#videoReviewComment .commentContent h5 {
   width: 240px !important;
   height: 25px !important;
   color: #2d2d2d !important;
@@ -1811,19 +1878,19 @@ body.videoExplorer #playlist {
   cursor: default !important;
 }
 
-.commentContent h5 > .name {
+#videoReviewComment .commentContent h5 > .name {
   color: #fff !important;
   font-weight: bold !important;
   display: table-cell;
 }
 
-.commentContent .avatar {
+#videoReviewComment .commentContent .avatar {
   width: 50px !important;
 }
 
 .resAvatar img,
 .currentAvatar img,
-.commentContent .avatar img {
+#videoReviewComment .commentContent .avatar img {
   width: 46px !important;
   height: 46px !important;
   border: none !important;
@@ -1832,7 +1899,7 @@ body.videoExplorer #playlist {
   box-shadow: 0 1px 1px rgba(0, 0, 0, .4);
 }
 
-.commentContent .commentContentBody {
+#videoReviewComment .commentContent .commentContentBody {
   width: auto !important;
   min-height: 30px !important;
   margin-left: 70px !important;
@@ -1843,8 +1910,8 @@ body.videoExplorer #playlist {
   background: #fff !important;
 }
 
-.commentContent .commentContentBody:after,
-.commentContent .commentContentBody:before {
+#videoReviewComment .commentContent .commentContentBody:after,
+#videoReviewComment .commentContent .commentContentBody:before {
   right: 100%;
   border: solid transparent;
   content: " ";
@@ -1854,7 +1921,7 @@ body.videoExplorer #playlist {
   pointer-events: none;
 }
 
-.commentContent .commentContentBody:after {
+#videoReviewComment .commentContent .commentContentBody:after {
   border-color: rgba(255, 255, 255, 0);
   border-right-color: #fff;
   border-width: 8px;
@@ -1862,7 +1929,7 @@ body.videoExplorer #playlist {
   margin-top: -8px;
 }
 
-.commentContent .commentContentBody:before {
+#videoReviewComment .commentContent .commentContentBody:before {
   border-color: rgba(238, 238, 238, 0);
   border-right-color: #ccc;
   border-width: 9px;
@@ -1870,14 +1937,14 @@ body.videoExplorer #playlist {
   margin-top: -9px;
 }
 
-.reviewSummary {
+#videoReviewComment .reviewSummary {
   line-height: 2em !important;
   position: absolute !important;
   bottom: 5px !important;
   left: 10px !important;
 }
 
-.reviewSummary > p:not([class]) {
+#videoReviewComment .reviewSummary > p:not([class]) {
   width: 2em !important;
   text-indent: -5.8em !important;
   white-space: nowrap !important;
@@ -1886,99 +1953,92 @@ body.videoExplorer #playlist {
   margin-left: 8px !important;
 }
 
-.reviewSummary > .nicorepoNicoru,
-.reviewSummary > .reviewNicoru {
+#videoReviewComment .reviewSummary > .nicorepoNicoru,
+#videoReviewComment .reviewSummary > .reviewNicoru {
   display: none !important;
 }
 
-.reviewShare > span {
+#videoReviewComment .reviewShare > span {
   margin-right: 5px !important;
 }
 
-.resContainer {
+#videoReviewComment .resContainer {
   width: auto !important;
   margin: 0 !important;
 }
 
-.videoReviewResContainer:last-child {
+#videoReviewComment .videoReviewResContainer:last-child {
   border-bottom: none !important;
   margin-bottom: -20px !important;
 }
 
-.videoReviewResContainer,
-.resCommentInputContainer {
+#videoReviewComment .videoReviewResContainer,
+#videoReviewComment .resCommentInputContainer {
   margin-top: 20px !important;
   padding: 20px 0 !important;
   border-top: 1px #ddd dashed !important;
   border-bottom: 1px #ddd dashed !important;
 }
 
-.resAvatar,
-.currentAvatar {
+#videoReviewComment .resAvatar,
+#videoReviewComment .currentAvatar {
   width: 50px !important;
   height: 50px !important;
   margin: 0 !important;
 }
 
-.reviewRes {
+#videoReviewComment .reviewRes {
   text-indent: -8px !important;
   margin-left: 8px !important;
   overflow: hidden !important;
   vertical-align: middle !important;
 }
 
-.currentAvatar + dl {
+#videoReviewComment .currentAvatar + dl {
   margin-left: 50px !important;
   padding: 10px 0 0 10px !important;
 }
 
-.resAvatar + dl {
+#videoReviewComment .resAvatar + dl {
   margin-left: 50px !important;
   padding: 0 10px !important;
 }
 
-.videoReviewResText {
+#videoReviewComment .videoReviewResText {
   width: 248px !important;
   padding: 5px !important;
   border-color: #ddd !important;
 }
 
-.videoReviewResSubmit {
+#videoReviewComment .videoReviewResSubmit {
   border: none !important;
   margin: 8px 0 0 !important;
 }
 
-.reviewResLetterCounter {
+#videoReviewComment .reviewResLetterCounter {
   margin: 0 !important;
 }
 
-.magnifyButton,
-.commandArea > input[type=button] {
+#ichibaMainFooter .commandArea > input[type=button] {
   width: 228px !important;
   background: #f5f5f5 !important;
   border: 1px #ddd solid !important;
-  padding: 0 10px !important;
+  padding: 8px 10px !important;
   margin: 10px auto 0 !important;
+  border-radius: 2px !important;
 }
 
-.magnifyButton:hover,
-.commandArea > input[type=button]:hover {
+#ichibaMainFooter .commandArea > input[type=button]:hover {
   border-color: #ccc !important;
   background: #fafafa !important;
   box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
 }
 
-.magnifyButton:active,
-.commandArea > input[type=button]:active {
+#ichibaMainFooter .commandArea > input[type=button]:active {
   box-shadow: 0 1px 1px rgba(0, 0, 0, .1) inset;
 }
 
-.commandArea > input[type=button] {
-  border-radius: 2px !important;
-  line-height: 2.3em !important;
-}
-
-.magnifyButton > a {
+#videoReviewComment .magnifyButton > a {
   color: #555 !important;
   font-weight: bold !important;
 }
@@ -2004,9 +2064,22 @@ body.videoExplorer #playlist {
   font-style: normal;
 }
 
-#foot_inner {
-  padding: 25px 10px !important;
+#feedbackLink { bottom: -123px !important; }
+
+#feedbackLink .btn_feedback {
+  color: #222 !important;
+  font-size: 11px !important;
+  background: #fff !important;
+  display: block !important;
+  width: auto !important;
+  height: auto !important;
+  text-indent: 0 !important;
+  text-decoration: none !important;
+  padding: 2px 15px 5px !important;
+  border-radius: 0 0 8px 8px !important;
 }
+
+#foot_inner { padding: 25px 10px !important; }
 
 /* Customize
 ----------------------------------------------- */
