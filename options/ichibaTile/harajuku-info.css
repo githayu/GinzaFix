@@ -1,7 +1,8 @@
 #nicommendContainer,
 #nicommendMoreButtonSide,
 .contentWrap.addContent,
-.contentWrap.addContent + div { display: none !important; }
+.contentWrap.addContent + div,
+#outline .sidebar { display: none !important; }
 
 #videoInfo .videoMainInfoContainer { margin: 0 !important; }
 #videoShareLinks { margin: 10px 0 10px auto !important; }
@@ -45,9 +46,6 @@
   display: block;
   overflow: hidden;
 }
-.expandContainerBottom:after {
-  clear: both;
-}
 
 #outline .main,
 #ichibaMain { width: 100% !important; }
@@ -69,5 +67,5 @@
   clear: both;
   margin-left: 0 !important;
 }
-
+.expandContainerBottom:after,
 #ichibaMainFooter { clear: both; }

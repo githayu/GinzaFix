@@ -1,6 +1,4 @@
-.wallPaletteItem:nth-child(2) > .wallPaletteItemName {
-  color: #fff !important;
-}
+.wallPaletteItem:nth-child(2) > .wallPaletteItemName { color: #fff !important; }
 
 .wallPaletteItem:nth-child(2).active > .wallPaletteItemName {
   color: #000 !important;

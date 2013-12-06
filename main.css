@@ -348,11 +348,6 @@ body.videoExplorer #videoHeader {
   padding-top: 10px !important;
 }
 
-#topVideoInfo .parentVideoInfo .videoThumb,
-#topVideoInfo .parentVideoLinkContainer {
-  margin-top: 10px !important;
-}
-
 #videoHeader .toggleDetailExpand {
   margin: 0 !important;
   float: none !important;
@@ -408,7 +403,6 @@ body.videoExplorer #videoHeader {
 
 #topVideoInfo .videoStats > li {
   color: #fff !important;
-  font-weight: bold;
   padding: 0 5px !important;
   margin: 0 !important;
   background-image: -moz-linear-gradient(top, #393939, #111, #393939) !important;
@@ -419,6 +413,7 @@ body.videoExplorer #videoHeader {
   border-left: none !important;
   display: block !important;
   float: none !important;
+  line-height: 1.6em !important;
 }
 
 #topVideoInfo .videoStats > li.videoStatsMylist {

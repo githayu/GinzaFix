@@ -49,9 +49,6 @@
   display: block;
   overflow: hidden;
 }
-.expandContainerBottom:after {
-  clear: both;
-}
 
 #outline .main,
 #ichibaMain { width: 100% !important; }
@@ -74,4 +71,5 @@
   margin-left: 0 !important;
 }
 
+.expandContainerBottom:after,
 #ichibaMainFooter { clear: both; }

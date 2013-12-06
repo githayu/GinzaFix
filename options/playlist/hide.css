@@ -1,17 +1,5 @@
 #playlist,
-#videoExplorerExpand {
-  display: none !important;
-}
-
-#videoShareLinks > .socialLinks {
-  top: -35px !important;
-}
-
-#outline,
-#videoInfo {
-  padding: 0 !important;
-}
-
-.sidebar {
-  padding-top: 10px;
-}
+#videoExplorerExpand { display: none !important; }
+#videoShareLinks > .socialLinks { top: -35px !important; }
+#outline { padding: 0 0 50px !important; }
+#outline .sidebar { padding-top: 10px; }
