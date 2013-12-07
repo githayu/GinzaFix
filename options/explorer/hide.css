@@ -1,0 +1,50 @@
+body.size_small.no_setting_panel.videoExplorer #playerContainerSlideArea {
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  visibility: hidden !important;
+}
+
+body.size_small.no_setting_panel.videoExplorer #playerContainerWrapper {
+  background: transparent !important;
+  height: 0 !important;
+}
+
+body.size_small.no_setting_panel.videoExplorer:not(.content-fix) #playerContainerWrapper { bottom: -44px !important; }
+body.size_small.no_setting_panel.videoExplorer.playlist:not(.content-fix) #playerContainerWrapper { bottom: -174px !important; }
+
+body.size_small.no_setting_panel.videoExplorer #playlist {
+  width: 980px !important;
+  right: auto !important;
+}
+
+#videoExplorerBackContainer { background: #222 !important; }
+#playerContainerSlideArea { height: auto !important; }
+
+body.size_small.no_setting_panel.videoExplorer.content-fix #playlist { margin: 0 !important; }
+body.size_small.no_setting_panel.videoExplorer:not(.content-fix) #playlist { left: 0 !important; }
+
+body.size_small.no_setting_panel.videoExplorer #videoExplorerBackContainer {
+  width: 280px !important;
+  padding: 12px 10px !important;
+}
+
+body.size_small.no_setting_panel.videoExplorer.content-fix #videoExplorerBackContainer {
+  position: fixed !important;
+  bottom: auto !important;
+  margin-top: 34px !important;
+}
+
+body.size_small.no_setting_panel.videoExplorer.content-fix.playlist #videoExplorerBackContainer { margin-top: 164px !important; }
+
+
+body.size_small.no_setting_panel.videoExplorer .videoExplorerMenu { top: 78px !important; }
+body.size_small.no_setting_panel.videoExplorer.playlist .videoExplorerMenu { top: 205px !important; }
+body.size_small.no_setting_panel.videoExplorer.content-fix .videoExplorerMenu {
+  position: fixed !important;
+  left: auto !important;
+  top: 114px !important;
+}
+body.size_small.no_setting_panel.videoExplorer.content-fix.nofix .videoExplorerMenu { top: 78px !important; }
+body.size_small.no_setting_panel.videoExplorer.content-fix.playlist .videoExplorerMenu { top: 244px !important; }
+body.size_small.no_setting_panel.videoExplorer.content-fix.playlist.nofix .videoExplorerMenu { top: 208px !important; }
