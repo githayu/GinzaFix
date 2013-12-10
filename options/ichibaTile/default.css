@@ -1,5 +1,4 @@
-#outline #ichibaMainLogo,
-#outline .nicommendHeader {
+#outline #ichibaMainLogo {
 	width: 100% !important;
 	height: auto !important;
 	background: #eee !important;
@@ -13,9 +12,7 @@
 	box-shadow: none !important;
 }
 
-#outline #ichibaMainLogo:before,
-#outline .nicommendHeader:before {
-	font-family: 'icon';
+#outline #ichibaMainLogo:before {
 	color: #fff;
 	width: 32px;
 	height: 32px;
@@ -31,11 +28,12 @@
 	left: 0;
 }
 
-#outline #ichibaMainLogo:before { content: '\e800'; }
-#outline .nicommendHeader:before { content: '\e801'; }
+#outline #ichibaMainLogo:before {
+	content: '';
+	background: #333 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABP0lEQVRIS2NkoDFgpLH5DHSzQArok9NADKJBYAcQe1LDdzAfgAw+B8TiSIZKANkvKbUEWxAdBRpqRYHB+4F6nWD6sVkwCyiZSoEFH4B6BfFZUACU7AfiGUCciWTRfyAb2UHofAug/HEgPgPEpvgscAZK7gFiUFDZkGBBHFDtQiBeBsTR+CyQBEo+oyCImoB66/FZAJJ7D8QCQIyckggFEcjlkUAcD8SLCFlwGBo8LkB6L1QxIQtA+cgEiC2B+AQhC0ARnE5mMIkA9b0lZEE+UMEEMixAyQMg/bjKIleg3C4gPgTE9mRYBNeCywJQ0fGURIP3AdWDkjgKwFeaglxvS4IlWH1Lt+Ial0O7gBIpQAwqnypwKMKrhpAPPgMN5QFiEM2HwwK8aghZAHJdHjTJ4vMBTjWELCAhjrErHfoWAADksDgZnizu3wAAAABJRU5ErkJggg==) no-repeat center;
+}
 
-#outline #ichibaMainLogo:after,
-#outline .nicommendHeader:after {
+#outline #ichibaMainLogo:after {
 	left: 32px;
 	border: solid transparent;
 	content: '';
@@ -50,8 +48,7 @@
 	margin-top: -5px;
 }
 
-#outline #ichibaMainLogo > a,
-#outline .nicommendHeader > .title {
+#outline #ichibaMainLogo > a {
 	color: #111 !important;
 	font-weight: bold !important;
 	height: 32px !important;
@@ -61,7 +58,6 @@
 	display: inline-block !important;
 }
 
-#outline #nicommendReload,
 #outline #ichibaMainHeader {
 	color: #eee !important;
 	height: 22px !important;
@@ -77,7 +73,6 @@
 	right: -5px !important;
 }
 
-#outline #nicommendReload:after,
 #outline #ichibaMainHeader:after {
 	content: '';
 	width: 0px;

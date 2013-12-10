@@ -1,0 +1,123 @@
+#playlist,
+#videoExplorerExpand {
+  width: 980px !important;
+  margin: 0 auto !important;
+}
+
+#videoExplorerExpand { width: 980px !important; }
+
+body:not(.full_with_browser):not(.videoExplorer) #playerContainerWrapper {
+  margin: 8px 0 0 !important;
+}
+
+body:not(.videoExplorer) #playlist {
+  background: transparent !important;
+}
+
+body:not(.videoExplorer) #playlistContainer,
+body:not(.videoExplorer) #playlist.animate .playlistTrashbox,
+body:not(.videoExplorer) #videoExplorerExpand .expandButton .arrow {
+  display: none !important;
+}
+
+body:not(.videoExplorer) #playlist .playlistInformation {
+  padding: 8px 10px 8px 140px !important;
+  height: auto !important;
+  line-height: 2rem !important;
+}
+
+body:not(.videoExplorer) #playlist .playlistInformation .playbackOption {
+  padding: 0 !important;
+  vertical-align: bottom !important;
+  line-height: 2rem !important;
+}
+
+body:not(.videoExplorer) #playlist .playlistInformation .playbackOption .option {
+  color: #eee !important;
+  width: auto !important;
+  height: auto !important;
+  font-size: 12px !important;
+  line-height: 2rem !important;
+  background: #333 !important;
+  text-indent: 0 !important;
+  padding: 0 10px !important;
+  margin: 0 !important;
+  vertical-align: bottom !important;
+  text-decoration: none !important;
+}
+
+body:not(.videoExplorer) #playlist .playlistInformation .playbackOption .option + .option { margin-left: 10px !important; }
+
+body:not(.videoExplorer) #playlist .playlistInformation .playbackOption .option.active {
+  color: #111 !important;
+  font-weight: bold !important;
+  background: #ddd !important;
+}
+
+body:not(.videoExplorer) #playlist .playlistInformation .playbackOption .option:not(.active):hover,
+body:not(.videoExplorer) #videoExplorerExpand .expandButton:hover {
+  background: #555 !important;
+  color: #fff !important;
+}
+
+body:not(.videoExplorer) #playlist .playlistInformation .generationMessage {
+  max-width: 278px;
+  color: #222;
+  position: relative !important;
+  background: #ddd !important;
+  vertical-align: bottom !important;
+  white-space: nowrap;
+  line-height: 2rem;
+  padding: 0 10px;
+}
+
+body:not(.videoExplorer) #playlist .playlistInformation .generationMessage:before {
+  right: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: '';
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(255, 255, 255, 0);
+  border-right-color: #ddd;
+  border-width: 5px;
+  margin-top: -5px;
+}
+
+body:not(.videoExplorer) #playlist .playlistInformation .generationMessage:after {
+  content: '';
+  width: 10px;
+  height: 2rem;
+  background: #ddd;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+body:not(.videoExplorer) #videoExplorerExpand {
+  position: relative !important;
+  background: transparent !important;
+  height: 0 !important;
+}
+
+body:not(.videoExplorer) #videoExplorerExpand .expandButton {
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 2rem !important;
+  height: auto !important;
+  width: 120px !important;
+  position: absolute !important;
+  bottom: 8px !important;
+  left: 10px !important;
+  background: #333;
+}
+
+body:not(.videoExplorer) #videoShareLinks > .socialLinks {
+  top: -61px !important;
+  right: 0 !important;
+  padding: 8px 10px;
+  background: rgba(255, 255, 255, .1);
+  box-shadow: -1px 0 1px rgba(0, 0, 0, .2);
+}
