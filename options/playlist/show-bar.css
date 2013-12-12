@@ -61,14 +61,14 @@ body:not(.videoExplorer) #videoExplorerExpand .expandButton:hover {
 }
 
 body:not(.videoExplorer) #playlist .playlistInformation .generationMessage {
-  max-width: 278px;
-  color: #222;
+  max-width: 278px !important;
+  color: #222 !important;
   position: relative !important;
   background: #ddd !important;
   vertical-align: bottom !important;
-  white-space: nowrap;
-  line-height: 2rem;
-  padding: 0 10px;
+  white-space: nowrap !important;
+  line-height: 2rem !important;
+  padding: 0 10px !important;
 }
 
 body:not(.videoExplorer) #playlist .playlistInformation .generationMessage:before {
@@ -103,8 +103,8 @@ body:not(.videoExplorer) #videoExplorerExpand {
 }
 
 body:not(.videoExplorer) #videoExplorerExpand .expandButton {
-  font-size: 12px;
-  font-weight: normal;
+  font-size: 12px !important;
+  font-weight: normal !important;
   line-height: 2rem !important;
   height: auto !important;
   width: 120px !important;
@@ -117,7 +117,7 @@ body:not(.videoExplorer) #videoExplorerExpand .expandButton {
 body:not(.videoExplorer) #videoShareLinks > .socialLinks {
   top: -61px !important;
   right: 0 !important;
-  padding: 8px 10px;
-  background: rgba(255, 255, 255, .1);
-  box-shadow: -1px 0 1px rgba(0, 0, 0, .2);
+  padding: 8px 10px !important;
+  background: rgba(255, 255, 255, .1) !important;
+  box-shadow: -1px 0 1px rgba(0, 0, 0, .2) !important;
 }

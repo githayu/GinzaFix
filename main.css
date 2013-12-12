@@ -414,7 +414,9 @@ body.videoExplorer #videoHeader {
   border-left: none !important;
   display: block !important;
   float: none !important;
-  line-height: 1.6em !important;
+  line-height: 17px !important;
+  height: 17px !important;
+  position: relative !important;
 }
 
 #topVideoInfo .videoStats > li.videoStatsMylist {
@@ -423,7 +425,11 @@ body.videoExplorer #videoHeader {
 
 #topVideoInfo .videoStats > li > span {
   color: #fff !important;
-  float: right !important;
+  padding: 0 !important;
+  display: block !important;
+  position: absolute !important;
+  right: 5px !important;
+  top: 0 !important;
 }
 
 #topVideoInfo div:not([class]) > .videoThumb {
@@ -882,8 +888,8 @@ body.size_normal.up_marquee:not(.full_with_browser) #playerContainer { height: 6
   border-left: 2px #333 solid !important;
   border-top: 2px #333 solid !important;
   border-bottom: 2px #333 solid !important;
-  height: 2em !important;
-  line-height: 2em !important;
+  height: 24px !important;
+  line-height: 20px !important;
 }
 
 #playerTabContainer .playerTabItem:not(.active):hover {
