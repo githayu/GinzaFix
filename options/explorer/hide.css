@@ -43,8 +43,8 @@ body.size_small.no_setting_panel.videoExplorer.playlist .videoExplorerMenu { top
 body.size_small.no_setting_panel.videoExplorer.content-fix .videoExplorerMenu {
   position: fixed !important;
   left: auto !important;
-  top: 114px !important;
+  top: 110px !important;
 }
 body.size_small.no_setting_panel.videoExplorer.content-fix.nofix .videoExplorerMenu { top: 78px !important; }
-body.size_small.no_setting_panel.videoExplorer.content-fix.playlist .videoExplorerMenu { top: 244px !important; }
+body.size_small.no_setting_panel.videoExplorer.content-fix.playlist .videoExplorerMenu { top: 240px !important; }
 body.size_small.no_setting_panel.videoExplorer.content-fix.playlist.nofix .videoExplorerMenu { top: 208px !important; }
