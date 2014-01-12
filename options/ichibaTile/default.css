@@ -3,13 +3,12 @@
 	height: auto !important;
 	background: #eee !important;
 	border: none !important;
-	border-bottom: 2px #ddd solid !important;
 	border-radius: 0 !important;
 	padding: 0 !important;
 	margin-bottom: 20px !important;
 	position: relative !important;
 	float: none !important;
-	box-shadow: none !important;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, .25) !important;
 }
 
 #outline #ichibaMainLogo:before {
@@ -20,9 +19,7 @@
 	line-height: 32px;
 	text-align: center;
 	text-shadow: 0 1px 1px #000;
-	background-color: #333;
 	display: inline-block;
-	border-bottom: 2px #111 solid;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -30,7 +27,7 @@
 
 #outline #ichibaMainLogo:before {
 	content: '';
-	background: #333 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABP0lEQVRIS2NkoDFgpLH5DHSzQArok9NADKJBYAcQe1LDdzAfgAw+B8TiSIZKANkvKbUEWxAdBRpqRYHB+4F6nWD6sVkwCyiZSoEFH4B6BfFZUACU7AfiGUCciWTRfyAb2UHofAug/HEgPgPEpvgscAZK7gFiUFDZkGBBHFDtQiBeBsTR+CyQBEo+oyCImoB66/FZAJJ7D8QCQIyckggFEcjlkUAcD8SLCFlwGBo8LkB6L1QxIQtA+cgEiC2B+AQhC0ARnE5mMIkA9b0lZEE+UMEEMixAyQMg/bjKIleg3C4gPgTE9mRYBNeCywJQ0fGURIP3AdWDkjgKwFeaglxvS4IlWH1Lt+Ial0O7gBIpQAwqnypwKMKrhpAPPgMN5QFiEM2HwwK8aghZAHJdHjTJ4vMBTjWELCAhjrErHfoWAADksDgZnizu3wAAAABJRU5ErkJggg==) no-repeat center;
+	background: #333 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYBAMAAAASWSDLAAAAKlBMVEUAAAD///////////////////////////////////////////////////+Gu8ovAAAADXRSTlMAiM0Ywpj0pzhvXkNFYm/EWgAAAG5JREFUGNNjIBIw515B5tw1QJLTvQsBDiBOLJRzAcSZG8BwAQh7FUCcvQpgztoCEMcWqkwAxOG9DJapXQDiMN0Gc3QbQBxWiCqIdZwQNsQhPJeQXQd3AMI9Clh8wXgRSMgKQDi8d4EExJ0IGWIBAF48QDLGuJG7AAAAAElFTkSuQmCC) no-repeat center;
 }
 
 #outline #ichibaMainLogo:after {
@@ -60,29 +57,17 @@
 
 #outline #ichibaMainHeader {
 	color: #eee !important;
-	height: 22px !important;
+	height: 32px !important;
 	font-size: 11px !important;
 	font-weight: bold !important;
-	line-height: 2em !important;
+	line-height: 3em !important;
 	float: none !important;
 	margin: 0 !important;
-	padding: 0 10px !important;
+	padding: 0 15px !important;
 	background: #333 !important;
 	position: absolute !important;
-	top: 5px !important;
-	right: -5px !important;
-}
-
-#outline #ichibaMainHeader:after {
-	content: '';
-	width: 0px;
-	height: 0px;
-	border-style: solid;
-	border-width: 3px 5px 0 0;
-	border-color: #777 transparent transparent transparent;
-	position: absolute;
-	bottom: -3px;
-	right: 0;
+	top: 0 !important;
+	right: 0 !important;
 }
 
 #outline #ichibaMainHeader > a {

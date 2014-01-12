@@ -4,3 +4,4 @@
 #outline .main > :not(#videoInfo),
 #outline .videoMainInfoContainer > #outline *:not(#bottomVideoDetailInformation):not(#videoInfoHead),
 #outline #videoInfoHead > *:not(.videoEditMenu) { display: none !important; }
+#bottomVideoDetailInformation > .supplementary { width: 350px; }

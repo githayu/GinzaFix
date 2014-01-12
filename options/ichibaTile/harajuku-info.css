@@ -6,6 +6,7 @@
 
 #videoInfo .videoMainInfoContainer { margin: 0 !important; }
 #videoShareLinks { margin: 10px 0 10px auto !important; }
+#bottomVideoDetailInformation > .supplementary { width: 350px; }
 
 .expandContainer {
   position: relative !important;
