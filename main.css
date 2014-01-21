@@ -272,7 +272,7 @@ body.videoExplorer #videoHeader {
   width: 100% !important;
   margin: 0px !important;
   background-position: 50% !important;
-  padding: 28px 0 10px !important;
+  padding: 30px 0 8px !important;
 }
 
 #videoHeaderDetail .videoDetailExpand {
@@ -397,6 +397,7 @@ body.videoExplorer #videoHeader {
   background-image: linear-gradient(top, #222222, #000000) !important;
   border: none !important;
   border-radius: 10px !important;
+  margin: 3px 0 0 !important;
 }
 
 #topVideoInfo .isNotFavoritedText,
@@ -471,11 +472,13 @@ body.videoExplorer #videoHeader {
   float: none !important;
 }
 
-#topVideoInfo .parentVideoInfo > .cct {
+#topVideoInfo .parentVideoInfo .cct {
   border-top: 1px #ccc solid !important;
   margin: 0 !important;
   padding-top: 10px !important;
 }
+
+#topVideoInfo .parentVideoInfo .parentVideoTitle { margin: 5px 0 0 !important; }
 
 #videoHeader .toggleDetailExpand {
   margin: 0 !important;

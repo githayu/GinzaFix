@@ -1,13 +1,13 @@
 # ニコニコ動画:GINZA を原宿っぽくしてみる
 
-Stylish : <http://userstyles.org/styles/93335/ginza>  
-Article : <http://kenapnet.blog.fc2.com/blog-entry-74.html>
+Stylish : <http://userstyles.org/styles/93335/ginza>
+Article : <http://nanoway.net/web/ginza-fix>
 
 ![thumbnail](nicovideo-after.jpg)
 
 ## 対応ブラウザ
 - GoogleChrome
-- Firefox (原宿風は非推奨)
+- Firefox
 - Opera
 - Safari
 
@@ -17,4 +17,4 @@ Article : <http://kenapnet.blog.fc2.com/blog-entry-74.html>
 この作品は、クリエイティブ・コモンズ [表示 - 継承 2.1 日本](http://creativecommons.org/licenses/by-sa/2.1/jp/) ライセンスの下に提供されています。
 
 ## 免責事項
-この UserStyleSheet をインストール、二次的利用をしたことによる、何らかのトラブルや損失・損害等につきまして [nanoway](http://nanoway.hateblo.jp) は、一切の責任を問わないものとします。
+この UserStyleSheet をインストール、二次的利用をしたことによる、何らかのトラブルや損失・損害等につきまして [nanoway](http://nanoway.net) は、一切の責任を問わないものとします。
