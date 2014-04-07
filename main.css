@@ -272,7 +272,7 @@ body.videoExplorer #videoHeader {
   width: 100% !important;
   margin: 0px !important;
   background-position: 50% !important;
-  padding: 30px 0 8px !important;
+  padding: 28px 0 10px !important;
 }
 
 #videoHeaderDetail .videoDetailExpand {
@@ -784,7 +784,6 @@ body.size_normal #topVideoInfo div:not([class]) > .videoThumb {
 
 #videoMenuTopList > li > a {
   width: 100% !important;
-  height: 100% !important;
   display: block !important;
 }
 
@@ -832,7 +831,8 @@ body.size_normal #topVideoInfo div:not([class]) > .videoThumb {
 }
 
 #videoMenuTopList > li > form + a,
-#videoMenuTopList > li > div + a {
+#videoMenuTopList > li > div + a,
+#videoMenuTopList > li.videoMenuList.menuUad > a > .nicoru-button {
   display: none !important;
 }
 
@@ -880,8 +880,8 @@ body.size_normal #topVideoInfo div:not([class]) > .videoThumb {
 }
 
 /* nicovideo_additional_mylist.user.js 対策 */
-#videoMenuTopList .nicoruButton { background: none !important; }
-#videoMenuTopList .nicoru-button { display: block !important; }
+#videoMenuTopList > .nicoruButton { background: none !important; }
+#videoMenuTopList > .nicoru-button { display: block !important; }
 
 #tagEditContainer {
   padding: 10px 0 !important;
@@ -1299,70 +1299,6 @@ body.size_normal.up_marquee:not(.full_with_browser) #playerContainer { height: 6
   bottom: 4px !important;
 }
 
-/* ニコメンド */
-#nicommendContainer,
-#nicommendMoreButtonSide,
-.contentWrap.addContent,
-.contentWrap.addContent + div {
-  display: none !important;
-}
-
-#nicommendPanelContent .nicommendContentsOuter {
-  border-color: #555 !important;
-  background: #fff !important;
-}
-
-#nicommendPanel h2.contentHeader {
-  font-size: 13px !important;
-  padding: 5px 10px !important;
-  border: none !important;
-  border-top: 1px #555 solid !important;
-  border-bottom: 1px #555 solid !important;
-}
-
-#nicommendPanel h2.contentHeader.priority {
-  padding: 5px 10px !important;
-  border-top: none !important;
-  border-bottom: 1px #555 solid !important;
-}
-
-#nicommendPanel .item {
-  background: #fff !important;
-  padding: 10px 10px 20px !important;
-}
-
-#nicommendPanel .item.video .itemThumb {
-  margin: 0 !important;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, .5);
-}
-
-#nicommendPanel .clickCount {
-  width: 86px !important;
-  text-align: right !important;
-  color: #fff !important;
-  background: rgba(0, 0, 0, .7) !important;
-  padding: 0 5px !important;
-  margin: -1.5em 0 0 !important;
-}
-
-#nicommendPanelContent.item .itemInfo {
-  padding-left: 8px !important;
-}
-
-#nicommendPanel .itemInfo .itemName {
-  font-size: 12px !important;
-}
-
-#nicommendPanel .horizontal {
-  background: #fff !important;
-  padding-top: 10px !important;
-}
-
-#nicommendPanel .nicoruButton {
-  top: 0 !important;
-  left: 0 !important;
-}
-
 #appliPanel {
   margin-bottom: 2px !important;
   width: 282px !important;
@@ -1726,9 +1662,13 @@ body.playlist #videoExplorer .videoExplorerContentWrapper,
 body.playlist.nofix #videoExplorer .videoExplorerContentWrapper { padding-top: 164px !important; }
 body.playlist.content-fix.nofix #videoExplorer .videoExplorerContentWrapper { padding-top: 200px !important; }
 
+#videoExplorer .userVideoContent.contents {
+  padding: 10px;
+}
+
 #videoExplorer .videoExplorerContent {
   width: auto !important;
-  padding: 15px !important;
+  padding: 15px 10px !important;
 }
 
 #videoExplorer .contentItemList {
@@ -1746,10 +1686,14 @@ body.playlist.content-fix.nofix #videoExplorer .videoExplorerContentWrapper { pa
 
 
 #videoExplorer .videoExplorerContent.column4 .contentItemList .item.video {
-  width: 146px !important;
-  margin: 20px 12px 80px 0 !important;
-  border: 2px #ddd solid !important;
+  width: 160px;
+  margin: 20px 6px 80px 0 !important;
+  border-bottom: 2px #ddd solid;
   position: relative !important;
+}
+
+#videoExplorer .videoExplorerContent.column4 .contentItemList .item.video:nth-of-type(4n) {
+  margin-right: 0 !important;
 }
 
 #videoExplorer .videoExplorerContent.column4 .contentItemList .item.video.gold {
@@ -1792,8 +1736,28 @@ body.playlist.content-fix.nofix #videoExplorer .videoExplorerContentWrapper { pa
 
 #videoExplorer .videoExplorerContent.column4 .contentItemList .folder .column4 .container {
   width: 130px !important;
-  height: 100px !important;
-  background-size: 130px 80px !important;
+  height: 90px !important;
+  background-size: 130px;
+  margin: 0 0 3px !important;
+}
+
+#videoExplorer .videoExplorerBody .videoExplorerContent.column4 .contentItemList .item.folder {
+  width: 130px !important;
+  margin: 0 20px 20px 0 !important;
+}
+
+#videoExplorer .videoExplorerBody .videoExplorerContent.column4 .contentItemList .item.folder:nth-of-type(4n) {
+  margin: 0 !important;
+}
+
+#videoExplorer .videoExplorerBody .videoExplorerContent .contentItemList .folder .container,
+#videoExplorer .videoExplorerBody .videoExplorerContent .suggestVideo .folder .container {
+  background-position: 0 -146px;
+}
+
+#videoExplorer .videoExplorerBody .videoExplorerContent .contentItemList .folder .container.folder_video,
+#videoExplorer .videoExplorerBody .videoExplorerContent .suggestVideo .folder .container.folder_video {
+  background-position: 0 -219px;
 }
 
 #videoExplorer .videoExplorerContent.column4 .contentItemList .item.video .playTime,
@@ -1805,18 +1769,15 @@ body.playlist.content-fix.nofix #videoExplorer .videoExplorerContentWrapper { pa
 
 #videoExplorer .videoExplorerContent.column4 .contentItemList .item.video .thumbnailContainer .nextPlayButton,
 #videoExplorer .videoExplorerContent.column4 .suggestVideo .item.video .thumbnailContainer .nextPlayButton {
-  right: 8px !important;
-  bottom: 8px !important;
   z-index: 1200 !important;
 }
 
 #videoExplorer .videoExplorerContent.column4 .contentItemList .item.video .balloon,
 #videoExplorer .videoExplorerContent.column4 .suggestVideo .item.video .balloon {
   font-size: 12px !important;
-  left: 6px !important;
-  top: 6px !important;
-  bottom: 6px !important;
-  width: 118px !important;
+  left: 0 !important;
+  top: 0 !important;
+  bottom: 0 !important;
   border-radius: 0 !important;
 }
 
@@ -1830,16 +1791,7 @@ body.playlist.content-fix.nofix #videoExplorer .videoExplorerContentWrapper { pa
 }
 
 #videoExplorer .videoExplorerContent.column4 .thumbnailContainer {
-  width: 134px !important;
-  height: 104px !important;
-  padding: 6px !important;
   margin: 0 !important;
-}
-
-#videoExplorer .videoExplorerContent.column4 .thumbnailContainer > .link {
-  border: 2px #555 solid !important;
-  width: 130px !important;
-  height: 100px !important;
 }
 
 #videoExplorer .videoExplorerContent.column4 .thumbnailContainer + .link {
@@ -1889,16 +1841,6 @@ body.playlist.content-fix.nofix #videoExplorer .videoExplorerContentWrapper { pa
 
 #videoExplorer .videoExplorerContent.column4 .uadFrame {
   background: none !important;
-}
-
-#videoExplorer .videoExplorerContent.column4 .contentItemList .item.video .thumbnailContainer .noImage,
-#videoExplorer .videoExplorerContent.column4 .contentItemList .item.video .thumbnailContainer .thumbnail,
-#videoExplorer .videoExplorerContent.column4 .suggestVideo .item.video .thumbnailContainer .noImage,
-#videoExplorer .videoExplorerContent.column4 .suggestVideo .item.video .thumbnailContainer .thumbnail {
-  width: 130px !important;
-  height: 100px !important;
-  top: 0 !important;
-  left: 0 !important;
 }
 
 /* 中間
