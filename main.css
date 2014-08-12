@@ -310,6 +310,11 @@ body.videoExplorer #videoHeader {
   text-overflow: ellipsis;
   -webkit-text-overflow: ellipsis;
   vertical-align: bottom;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #111;
+  color: #fff;
 }
 
 #topVideoInfo .parentVideoInfo .videoThumb {
@@ -318,7 +323,7 @@ body.videoExplorer #videoHeader {
   overflow: hidden !important;
   border: 2px #111 solid !important;
   border-top: none !important;
-  margin: 0 10px 0 0 !important;
+  margin: 33px 10px 0 0 !important;
 }
 
 #topVideoInfo .parentVideoInfo .videoThumb img {
@@ -470,12 +475,13 @@ body.videoExplorer #videoHeader {
   margin: 0 !important;
   background-color: #fff !important;
   float: none !important;
+  position: relative !important;
 }
 
 #topVideoInfo .parentVideoInfo .cct {
   border-top: 1px #ccc solid !important;
   margin: 0 !important;
-  padding-top: 10px !important;
+  padding-top: 15px !important;
 }
 
 #topVideoInfo .parentVideoInfo .parentVideoTitle { margin: 5px 0 0 !important; }
@@ -1663,7 +1669,7 @@ body.playlist.nofix #videoExplorer .videoExplorerContentWrapper { padding-top: 1
 body.playlist.content-fix.nofix #videoExplorer .videoExplorerContentWrapper { padding-top: 200px !important; }
 
 #videoExplorer .userVideoContent.contents {
-  padding: 10px;
+  padding: 0;
 }
 
 #videoExplorer .videoExplorerContent {
@@ -1673,170 +1679,13 @@ body.playlist.content-fix.nofix #videoExplorer .videoExplorerContentWrapper { pa
 
 #videoExplorer .contentItemList {
   margin: 0 !important;
-  padding: 15px 0 !important;
+  padding: 13px 0 !important;
   border: none !important;
 }
 
-#videoExplorer .videoExplorerContent.column4 .contentItemList .item.video .createdTime .value {
+.uadTagRelated .default .itemList > div > li,
+.videoExplorerBody .contentItemList.column4 .item {
   margin-right: 5px !important;
-}
-
-#videoExplorer .uadTagRelated .default .landing { display: none !important; }
-
-
-
-#videoExplorer .videoExplorerContent.column4 .contentItemList .item.video {
-  width: 160px;
-  margin: 20px 6px 80px 0 !important;
-  border-bottom: 2px #ddd solid;
-  position: relative !important;
-}
-
-#videoExplorer .videoExplorerContent.column4 .contentItemList .item.video:nth-of-type(4n) {
-  margin-right: 0 !important;
-}
-
-#videoExplorer .videoExplorerContent.column4 .contentItemList .item.video.gold {
-  border-color: #494949 !important;
-  background-image: -moz-linear-gradient(top, #fff1a1, #ffa517) !important;
-  background-image: -ms-linear-gradient(top, #fff1a1, #ffa517) !important;
-  background-image: -o-linear-gradient(top, #fff1a1, #ffa517) !important;
-  background-image: -webkit-linear-gradient(top, #fff1a1, #ffa517) !important;
-  background-image: linear-gradient(top, #fff1a1, #ffa517) !important;
-}
-
-#videoExplorer .videoExplorerContent.column4 .contentItemList .item.video.silver {
-  border-color: #494949 !important;
-  background-image: -moz-linear-gradient(top, #ebebeb, #bbb) !important;
-  background-image: -ms-linear-gradient(top, #ebebeb, #bbb) !important;
-  background-image: -o-linear-gradient(top, #ebebeb, #bbb) !important;
-  background-image: -webkit-linear-gradient(top, #ebebeb, #bbb) !important;
-  background-image: linear-gradient(top, #ebebeb, #bbb) !important;
-}
-
-#videoExplorer .videoExplorerContent.column4 .contentItemList .folder .column4 {
-  overflow: hidden !important;
-}
-
-#videoExplorer .videoExplorerContent.column4 .contentItemList .item.video .createdTime,
-#videoExplorer .videoExplorerContent.column4 .suggestVideo .item.video .createdTime {
-  position: absolute !important;
-  top: -20px !important;
-}
-
-#videoExplorer .videoExplorerBody .videoExplorerContent .contentItemList .item.video .createdTime .new,
-#videoExplorer .videoExplorerBody .videoExplorerContent .suggestVideo .item.video .createdTime .new {
-  font-size: 11px !important;
-}
-
-#videoExplorer .videoExplorerContent.column4 .contentItemList .item.video .createdTime .value:not(.new),
-#videoExplorer .videoExplorerContent.column4 .suggestVideo .item.video .createdTime .value:not(.new) {
-  font-weight: bold !important;
-}
-
-#videoExplorer .videoExplorerContent.column4 .contentItemList .folder .column4 .container {
-  width: 130px !important;
-  height: 90px !important;
-  background-size: 130px;
-  margin: 0 0 3px !important;
-}
-
-#videoExplorer .videoExplorerBody .videoExplorerContent.column4 .contentItemList .item.folder {
-  width: 130px !important;
-  margin: 0 20px 20px 0 !important;
-}
-
-#videoExplorer .videoExplorerBody .videoExplorerContent.column4 .contentItemList .item.folder:nth-of-type(4n) {
-  margin: 0 !important;
-}
-
-#videoExplorer .videoExplorerBody .videoExplorerContent .contentItemList .folder .container,
-#videoExplorer .videoExplorerBody .videoExplorerContent .suggestVideo .folder .container {
-  background-position: 0 -146px;
-}
-
-#videoExplorer .videoExplorerBody .videoExplorerContent .contentItemList .folder .container.folder_video,
-#videoExplorer .videoExplorerBody .videoExplorerContent .suggestVideo .folder .container.folder_video {
-  background-position: 0 -219px;
-}
-
-#videoExplorer .videoExplorerContent.column4 .contentItemList .item.video .playTime,
-#videoExplorer .videoExplorerContent.column4 .suggestVideo .item.video .playTime {
-  right: 0 !important;
-  bottom: 0 !important;
-  font-weight: bold !important;
-}
-
-#videoExplorer .videoExplorerContent.column4 .contentItemList .item.video .thumbnailContainer .nextPlayButton,
-#videoExplorer .videoExplorerContent.column4 .suggestVideo .item.video .thumbnailContainer .nextPlayButton {
-  z-index: 1200 !important;
-}
-
-#videoExplorer .videoExplorerContent.column4 .contentItemList .item.video .balloon,
-#videoExplorer .videoExplorerContent.column4 .suggestVideo .item.video .balloon {
-  font-size: 12px !important;
-  left: 0 !important;
-  top: 0 !important;
-  bottom: 0 !important;
-  border-radius: 0 !important;
-}
-
-#videoExplorer .videoExplorerContent.column4 .contentItemList .folder .container .folderName,
-#videoExplorer .videoExplorerContent.column4 .suggestVideo .folder .container .folderName {
-  bottom: 0 !important;
-  left: 0 !important;
-  right: 0 !important;
-  width: auto !important;
-  padding: 5px !important;
-}
-
-#videoExplorer .videoExplorerContent.column4 .thumbnailContainer {
-  margin: 0 !important;
-}
-
-#videoExplorer .videoExplorerContent.column4 .thumbnailContainer + .link {
-  position: absolute !important;
-  display: block !important;
-  bottom: -60px !important;
-  left: 0 !important;
-  width: 150px !important;
-  height: 4.5em !important;
-  overflow: hidden !important;
-}
-
-#videoExplorer .videoExplorerContent.column4 .videoInformation {
-  border-top: 1px rgba(0, 0, 0 ,.1) solid !important;
-  clear: both !important;
-}
-
-#videoExplorer .videoExplorerContent.column4 .contentItemList .item.video .videoInformation .info,
-#videoExplorer .videoExplorerContent.column4 .suggestVideo .item.video .videoInformation .info {
-  color: #555 !important;
-  display: list-item !important;
-  font-size: 11px !important;
-  padding: 0 10px !important;
-  line-height: 18px !important;
-  border-bottom: 1px rgba(0, 0, 0, .1) solid !important;
-  border-top: 1px rgba(255, 255, 255, .3) solid !important;
-  background-color: rgba(0, 0, 0, .07) !important;
-}
-
-#videoExplorer .videoExplorerContent.column4 .contentItemList .item.video .videoInformation .info:last-child,
-#videoExplorer .videoExplorerContent.column4 .suggestVideo .item.video .videoInformation .info:last-child {
-  border-bottom: none !important;
-}
-
-#videoExplorer .videoExplorerContent.column4 .contentItemList .item.video .videoInformation .info > .value,
-#videoExplorer .videoExplorerContent.column4 .suggestVideo .item.video .videoInformation .info > .value {
-  font-size: 10px !important;
-  font-weight: bold !important;
-  margin: 0 !important;
-}
-
-#videoExplorer .videoExplorerContent.column4 .contentItemList .item.video .videoInformation .info > .value:before,
-#videoExplorer .videoExplorerContent.column4 .suggestVideo .item.video .videoInformation .info > .value:before {
-  content: '\003a' !important;
-  margin: 0 5px !important;
 }
 
 #videoExplorer .videoExplorerContent.column4 .uadFrame {

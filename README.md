@@ -1,7 +1,6 @@
 # ニコニコ動画:GINZA を原宿っぽくしてみる
 
 Stylish : <http://userstyles.org/styles/93335/ginza>
-
 Article : <http://nanoway.net/web/ginza-fix>
 
 ![thumbnail](nicovideo-after.jpg)
