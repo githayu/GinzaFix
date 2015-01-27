@@ -13,7 +13,7 @@ html, body {
 #topVideoInfo .ranking > .icon:first-child,
 .channel .ch_breadcrumb,
 #playerTabContainer .socialButtons,
-#playerCommentPanel .nicoru-button,
+.comment-panel .nicoru-button,
 #outline .videoMainInfoContainer > *:not(#videoInfoHead):not(#videoShareLinks):not(#bottomVideoDetailInformation),
 #outline.owner #videoInfoHead > *:not(.videoEditMenu),
 #outline:not(.owner) #videoInfoHead,
@@ -1022,7 +1022,7 @@ body.size_normal.up_marquee:not(.full_with_browser) #playerContainer { height: 6
   top: 45px !important;
 }
 
-#playerTabContainer > table {
+#playerTabContainer > .player-panel-tabs > table {
   font-size: 11px !important;
   width: 200px !important;
   margin: 0 auto !important;
@@ -1031,20 +1031,20 @@ body.size_normal.up_marquee:not(.full_with_browser) #playerContainer { height: 6
   z-index: 1 !important;
 }
 
-#playerTabContainer .playerTabContentItem {
+#playerTabContainer .player-tab-content-item {
   height: calc(100% - 5px) !important;
   height: -moz-calc(100% - 5px) !important;
   height: -webkit-calc(100% - 5px) !important;
 }
 
-#playerTabContainer .playerTabContentItem.comment.active {
+#playerTabContainer .player-tab-content-item.comment.active {
   height: 92.8% !important;
   height: calc(100% - 30px) !important;
   height: -moz-calc(100% - 30px) !important;
   height: -webkit-calc(100% - 30px) !important;
 }
 
-#playerTabContainer .playerTabItem {
+#playerTabContainer .player-tab-item {
   color: #fff !important;
   background-image: -moz-linear-gradient(top, #999, #ccc) !important;
   background-image: -webkit-linear-gradient(top, #999, #ccc) !important;
@@ -1056,52 +1056,46 @@ body.size_normal.up_marquee:not(.full_with_browser) #playerContainer { height: 6
   line-height: 20px !important;
 }
 
-#playerTabContainer .playerTabItem:not(.active):hover {
+#playerTabContainer .player-tab-item:not(.active):hover {
   background-image: -moz-linear-gradient(top, #666, #999) !important;
   background-image: -webkit-linear-gradient(top, #666, #999) !important;
   background-image: linear-gradient(top, #666, #999) !important;
 }
 
-#playerTabContainer .playerTabHeader th:last-child {
+#playerTabContainer .player-tab-header th:last-child {
   border-right: 2px #333 solid !important;
 }
 
-#playerTabContainer .playerTabItem.active {
+#playerTabContainer .player-tab-item.active {
   color: #000 !important;
   background: #fff !important;
   border-bottom-color: #fff !important;
 }
 
-#playerCommentPanel .playerCommentPanelHeader {
+.comment-panel .panel-header {
   position: static !important;
 }
 
-#playerCommentPanel .playerCommentPanelHeader .currentThreadName,
-#playerCommentPanel .playerCommentPanelHeader .threadName {
-  padding: 0 5px !important;
+.comment-panel .panel-header .comment-type > .text {
+  width: 130px !important;
+  border-color: #555 !important;
+  margin: 0 !important;
 }
 
-#playerCommentPanel .playerCommentPanelHeader .currentThreadName { width: 130px !important; }
-#playerCommentPanel .playerCommentPanelHeader .threadSelectPanel { width: 140px !important; }
-
-#playerCommentPanel .playerCommentPanelHeader .currentThreadName,
-#playerCommentPanel .playerCommentPanelHeader .threadSelectPanel {
-  margin: 0 !important;
-  line-height: 21px !important;
+.comment-panel .panel-header .comment-type > .options {
+  width: 140px !important;
+  padding: 0 !important;
   border-color: #555 !important;
 }
 
-#playerCommentPanel .playerCommentPanelHeader .currentThreadName:hover:after,
-#playerCommentPanel .playerCommentPanelHeader .threadSelectPanel:hover:after {
-  background: -moz-linear-gradient(top, #444, #868686) !important;
-  background: -ms-linear-gradient(top, #444, #868686) !important;
-  background: -o-linear-gradient(top, #444, #868686) !important;
-  background: -webkit-linear-gradient(top, #444, #868686) !important;
-  background: linear-gradient(top, #444, #868686) !important;
+.comment-panel .panel-header .comment-type > .text,
+.comment-panel .panel-header .comment-type > .options > li {
+  padding: 0 5px !important;
+  line-height: 21px !important;
 }
 
-#playerCommentPanel .playerCommentPanelHeader .currentThreadName:after,
-#playerCommentPanel .playerCommentPanelHeader .threadName.selectedComment:after {
+.comment-panel .panel-header .comment-type > .text:after,
+.comment-panel .panel-header .comment-type > .options > .placeholder:after {
   content: '\0025bc' !important;
   color: #fff !important;
   font-size: 10px !important;
@@ -1120,8 +1114,17 @@ body.size_normal.up_marquee:not(.full_with_browser) #playerContainer { height: 6
   background: linear-gradient(top, #555, #969696) !important;
 }
 
-#playerCommentPanel .playerCommentPanelHeader .autoScroll,
-#playerCommentPanel .playerCommentPanelHeader .refresh {
+.comment-panel .panel-header .comment-type > .text:hover:after,
+.comment-panel .panel-header .comment-type > .options > .placeholder:after {
+  background: -moz-linear-gradient(top, #444, #868686) !important;
+  background: -ms-linear-gradient(top, #444, #868686) !important;
+  background: -o-linear-gradient(top, #444, #868686) !important;
+  background: -webkit-linear-gradient(top, #444, #868686) !important;
+  background: linear-gradient(top, #444, #868686) !important;
+}
+
+.comment-panel .panel-header .auto-scroll,
+.comment-panel .panel-header .refresh {
   width: auto !important;
   height: auto !important;
   position: absolute !important;
@@ -1132,12 +1135,12 @@ body.size_normal.up_marquee:not(.full_with_browser) #playerContainer { height: 6
   float: none !important;
 }
 
-#playerCommentPanel .playerCommentPanelHeader .autoScroll {
+.comment-panel .panel-header .auto-scroll {
   left: 0 !important;
   padding-left: 18px !important;
 }
 
-#playerCommentPanel .playerCommentPanelHeader .autoScroll:before {
+.comment-panel .panel-header .auto-scroll:before {
   content: '';
   color: #494949;
   width: 10px;
@@ -1150,10 +1153,10 @@ body.size_normal.up_marquee:not(.full_with_browser) #playerContainer { height: 6
   bottom: 3px;
 }
 
-#playerCommentPanel .playerCommentPanelHeader .autoScroll.on:before { content: '\002714'; }
-#playerCommentPanel .playerCommentPanelHeader .refresh { right: 2px !important; }
+.comment-panel .panel-header .auto-scroll.on:before { content: '\002714'; }
+.comment-panel .panel-header .refresh { right: 2px !important; }
 
-#playerCommentPanel .playerCommentPanelHeader .comment {
+.comment-panel .panel-header .comment-log.on {
   text-indent: 0 !important;
   float: none !important;
   margin: 0 !important;
@@ -1163,27 +1166,21 @@ body.size_normal.up_marquee:not(.full_with_browser) #playerContainer { height: 6
   right: 2px !important;
 }
 
-#commentLogHeader { margin: 0 !important; }
+.log-form { margin: 0 !important; }
 
-#commentLogHeader > form > .logDateSelect > li > p {
-  margin: 0 !important;
-  border: none !important;
-  padding: 0 !important;
-}
-
-#commentLogHeader > form > .logDateSelect > li > p > input {
+.log-form > .log-date > li > p > input {
   border: 1px #555 solid !important;
   padding: 0 5px !important;
   width: 100% !important;
   line-height: 20px !important;
 }
 
-#commentLogHeader > form {
+.log-form {
   margin-top: 5px !important;
   position: relative !important;
 }
 
-#commentLogHeader .logRefresh {
+.log-form .log-refresh {
   position: absolute !important;
   top: 2px !important;
   right: 2px !important;
@@ -1191,61 +1188,65 @@ body.size_normal.up_marquee:not(.full_with_browser) #playerContainer { height: 6
 }
 
 #ui-datepicker-div { margin: -1px 0 0 0 !important; }
-#commentLogHeader > form > .logDateSelect { float: none !important; }
-#commentDefault { border-color: #555 !important; }
 
-#playerCommentPanel .section .commentTable#commentLog { top: 55px !important; }
+.log-form > .log-date {
+  float: left !important;
+  border-right: none !important;
+}
 
-#playerTabContainer .commentTableHeaderWrapper {
+.log-form > input { border-color: #555 !important; }
+
+.comment-panel .section .commentTable#commentLog { top: 55px !important; }
+
+#playerTabContainer .slick-header-columns {
   background: -moz-linear-gradient(top, #fff, #eee) !important;
   background: -webkit-linear-gradient(top, #fff, #eee) !important;
   background: linear-gradient(top, #fff, #eee) !important;
   border-bottom: 1px #555 solid !important;
 }
 
-#playerTabContainer .commentTableHeader {
+#playerTabContainer .slick-header {
   font-size: 12px !important;
   color: #111 !important;
 }
 
-#playerTabContainer .commentTableContainer {
+#playerTabContainer .slick-viewport {
   width: 100% !important;
   background-color: #fff !important;
-  top: 23px !important;
-  overflow: hidden !important;
+  overflow-y: hidden !important;
 }
 
-#playerTabContainer .commentTableContainer:hover {
+#playerTabContainer .slick-viewport:hover {
   overflow: auto !important;
 }
 
-#playerTabContainer .commentTableContainer::-webkit-scrollbar {
+#playerTabContainer .slick-viewport::-webkit-scrollbar {
   width: 15px;
 }
 
-#playerTabContainer .commentTableContainer::-webkit-scrollbar-track-piece {
+#playerTabContainer .slick-viewport::-webkit-scrollbar-track-piece {
   background: #eee;
   box-shadow: 0 1px 3px rgba(0, 0, 0, .5), 0 -1px 1px rgba(0, 0, 0, .3);
 }
 
-#playerTabContainer .commentTableContainer::-webkit-scrollbar-thumb {
+#playerTabContainer .slick-viewport::-webkit-scrollbar-thumb {
   background: #ccc;
   border: 2px #eee solid;
 }
 
-#playerTabContainer .commentTableContainer::-webkit-scrollbar-thumb:hover {
+#playerTabContainer .slick-viewport::-webkit-scrollbar-thumb:hover {
   background: #bbb;
 }
 
-#playerCommentPanel .commentTableContainerInner { font-size: 13px !important; }
-#commentToolTip > .message { font-size: 12px !important; }
+.comment-panel .grid-canvas { font-size: 13px !important; }
+.comment-tooltip { font-size: 12px !important; }
 
 #videoDetailInformation .translation .translationButton,
-#playerCommentPanel .playerCommentPanelHeader .comment,
-#playerCommentPanel .playerCommentPanelHeader .refresh,
-#commentLogHeader .logRefresh,
-#playerNgPanel .ngAddPanelTriger,
-#playerNgPanel .ngAddButton {
+.comment-panel .panel-header .comment-log.on,
+.comment-panel .panel-header .refresh,
+.log-form .log-refresh,
+.ng-panel .ng-register-button,
+.ng-panel .register-button {
   width: auto !important;
   height: auto !important;
   padding: 0 5px !important;
@@ -1263,11 +1264,11 @@ body.size_normal.up_marquee:not(.full_with_browser) #playerContainer { height: 6
 }
 
 #videoDetailInformation .translation .translationButton:hover,
-#playerCommentPanel .playerCommentPanelHeader .comment:hover,
-#playerCommentPanel .playerCommentPanelHeader .refresh:hover,
-#commentLogHeader .logRefresh:hover,
-#playerNgPanel .ngAddPanelTriger:hover,
-#playerNgPanel .ngAddButton:hover {
+.comment-panel .panel-header .comment-log.on:hover,
+.comment-panel .panel-header .refresh:hover,
+.log-form .log-refresh:hover,
+.ng-panel .ng-register-button:hover,
+.ng-panel .register-button:hover {
   background: -moz-linear-gradient(top, #ddd 45%, #bbb , #ccc) !important;
   background: -ms-linear-gradient(top, #ddd 45%, #bbb , #ccc) !important;
   background: -o-linear-gradient(top, #ddd 45%, #bbb , #ccc) !important;
@@ -1276,32 +1277,22 @@ body.size_normal.up_marquee:not(.full_with_browser) #playerContainer { height: 6
   box-shadow: 2px 0 #6e6e6e, 0 2px #6e6e6e, 2px 2px #6e6e6e, -2px 0 #6e6e6e, 0 -2px #9a9a9a, -2px -2px #9a9a9a, 2px -2px #9a9a9a, -2px 2px #6e6e6e;
 }
 
-#playerTabContainer .cell.hover,
-#playerTabContainer .cell.hover > .comment,
-#playerTabContainer .cell.hover > .vpos,
-#playerTabContainer .cell.hover > .time,
-#playerTabContainer .cell.hover > .resNo {
+.player-panel-tabs .panel-grid .slick-row:hover {
   color: #111 !important;
   background-color: #ddd !important;
 }
 
-#playerTabContainer .cell > * {
-  height: 16px;
-  font-size: 12px !important;
-  vertical-align: top !important;
-}
-
-#playerTabContainer .cell .resizer {
+#playerTabContainer .slick-resizable-handle {
   bottom: 0;
   height: auto !important;
   background-color: rgba(0, 0, 0, .1) !important;
 }
 
-#playerTabContainer .playerTabHeader {
+#playerTabContainer .player-tab-header {
   height: auto !important;
 }
 
-#playerTabContainer .playerTabContent {
+#playerTabContainer .player-tab-content {
   background-color: #fff !important;
   border: 2px #333 solid !important;
   bottom: 4px !important;
@@ -1324,46 +1315,37 @@ body.setting_panel #playerAlignmentArea {
   margin-left: 8px;
 }
 
-#commentNgSettingHeader .ngAddPanel {
+.ng-panel .ng-register-dialog {
   width: 100% !important;
   box-shadow: 0 1px 2px rgba(0, 0, 0, .2) !important;
 }
 
-#commentNgSettingHeader .ngAddPanelInner,
-#commentNgSettingHeader .ngInputText,
-#commentNgSettingHeader .ngInputText > input[type=text] {
+.ng-panel .ng-source-input {
   width: auto !important;
-}
-
-#commentNgSettingHeader .ngInputText {
-  border: none !important;
-  padding: 0 !important;
-  margin: 8px 0 !important;
-  box-shadow: none !important;
-}
-
-#commentNgSettingHeader .ngInputText > input[type=text] {
-  width: auto;
   width: calc(100% - 12px) !important;
   width: -moz-calc(100% - 12px) !important;
   width: -webkit-calc(100% - 12px) !important;
   box-shadow: none !important;
   border: 1px #ccc solid !important;
   padding: 5px !important;
-  margin: 0 !important;
+  margin: 8px 0 !important;
 }
 
-#commentNgSettingHeader .ngInputText > input[type=text]:hover {
+.ng-panel .ng-source-input:hover {
   border-color: #bbb !important;
   box-shadow: 0 1px 2px rgba(0, 0, 0, .1) inset !important;
 }
 
-#commentNgSettingHeader .ngInputText > input[type=text]:focus {
+.ng-panel .ng-source-input:focus {
   border-color: #38f !important;
   box-shadow: 0 1px 2px rgba(0, 0, 0, .1) inset !important;
 }
 
-#playerCommentPanel .performanceAlert {
+.ng-panel .register-button {
+  top: auto !important;
+}
+
+.comment-panel .performanceAlert {
   width: 260px;
   border: none;
   box-shadow: 0 1px 10px rgba(0, 0, 0, .7);
