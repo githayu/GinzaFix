@@ -3,7 +3,7 @@
 Stylish : <http://userstyles.org/styles/93335/ginza>  
 Article : <http://nanoway.net/web/ginza-fix>
 
-![thumbnail](nicovideo-after.jpg)
+![thumbnail](img/sm1274898.jpg)
 
 ## 対応ブラウザ
 - GoogleChrome

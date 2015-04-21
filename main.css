@@ -121,8 +121,8 @@ html, body {
   left: 1px !important;
 }
 
-#siteHeaderLeftMenuContainer > li:not([class]):nth-child(2n) {
-  border-left: 1px #e9e9e9 solid !important;
+#siteHeaderLeftMenuContainer > li:not([class]):nth-child(2n+1) {
+  border-right: 1px #e9e9e9 solid !important;
 }
 
 #siteHeaderLeftMenuContainer > .menuServiceList {
@@ -131,7 +131,7 @@ html, body {
 }
 
 #siteHeaderLeftMenuContainer > .menuServiceList > a {
-  padding-left: 124px !important;
+  width: 212px !important;
   display: block !important;
 }
 
@@ -172,8 +172,8 @@ html, body {
 
 /* ヘッダーコンテンツ
 ----------------------------------------------- */
-#content > .videoHeaderOuter {
-  background-color: #fff !important;
+body #content {
+  padding-top: 32px !important;
 }
 
 body.size_normal:not(.full_with_browser) .videoHeaderOuter {
@@ -188,6 +188,30 @@ body.size_normal:not(.full_with_browser) .videoHeaderOuter {
 
 body.videoExplorer #videoHeader {
   margin-bottom: 10px !important;
+}
+
+#videoHeader.menuOpened #editorMenu {
+  margin-top: 0 !important;
+}
+
+#editorMenu {
+  transition: none !important;
+  width: auto !important;
+  display: inline-block !important;
+}
+
+#editorMenu.hidden {
+  display: none !important;
+}
+
+#parentMenuBox > li:first-child {
+  border: none !important;
+  background-color: #2d2d2d !important;
+  padding: 0 5px !important;
+}
+
+#parentMenuBox > li:first-child > span {
+  color: #fff !important;
 }
 
 #videoHeaderMenu {
@@ -301,6 +325,11 @@ body.videoExplorer #videoHeader {
   position: absolute !important;
   top: 60px !important;
   left: 10px !important;
+}
+
+#videoHeader.ownerThreadEditor #topVideoInfo .infoHeadOuter,
+#videoHeader.ownerThreadEditor #topVideoInfo .ranking {
+  top: 115px !important;
 }
 
 #topVideoInfo .parentVideoInfo .contentsTree {
@@ -493,7 +522,7 @@ body.videoExplorer #videoHeader {
   float: none !important;
   position: absolute !important;
   right: 10px !important;
-  top: 60px !important;
+  top: 45px !important;
 }
 
 #videoHeader.infoActive .videoDetailOpenButton,
@@ -1845,7 +1874,7 @@ body.playlist.content-fix.nofix #videoExplorer .videoExplorerContentWrapper { pa
 #videoDetailInformation .translation {
   background-color: #fff !important;
   position: absolute !important;
-  top: 30px !important;
+  top: 15px !important;
   right: 12px !important;
   padding: 0 !important;
   margin: 0 !important;
