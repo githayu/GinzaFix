@@ -194,14 +194,14 @@ body.videoExplorer #videoHeader {
   margin-top: 12px !important;
 }
 
-#editorMenu {
+#videoHeader.menuOpened .tvChanMenuHeightController {
+  margin-top: 0 !important;
+}
+
+#videoHeader.owner.ownerThreadEditor #editorMenu {
   transition: none !important;
   width: auto !important;
   display: inline-block !important;
-}
-
-#editorMenu.hidden {
-  display: none !important;
 }
 
 #parentMenuBox > li:first-child {
@@ -329,7 +329,7 @@ body.videoExplorer #videoHeader {
 
 #videoHeader.ownerThreadEditor #topVideoInfo .infoHeadOuter,
 #videoHeader.ownerThreadEditor #topVideoInfo .ranking {
-  top: 115px !important;
+  top: 138px !important;
 }
 
 #topVideoInfo .parentVideoInfo .contentsTree {
@@ -536,7 +536,6 @@ body.videoExplorer #videoHeader {
   height: 26px !important;
   text-indent: -999px !important;
   overflow: hidden !important;
-  vertical-align: middle !important;
   display: block;
 }
 
@@ -802,7 +801,6 @@ body.size_normal #topVideoInfo div:not([class]) > .videoThumb {
 
 #videoMenuTopList {
   width: auto !important;
-  padding: 0 !important;
   margin: 0 !important;
   white-space: nowrap !important;
   right: -3px !important;
